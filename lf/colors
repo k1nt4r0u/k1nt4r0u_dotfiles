@@ -1,0 +1,20 @@
+
+cmd   blue  default bold  
+dir   blue  default bold  
+file  cyan  default       
+exe   green default bold  
+
+*.zip 5 default
+*.tar 5 default
+*.gz  5 default
+*.rar 5 default
+
+*.lua  cyan default
+*.conf cyan default
+*.sh   green default
+*.py   blue default
+
+*.jpg  magenta default
+*.png  magenta default
+*.mp4  magenta default
+border blue default

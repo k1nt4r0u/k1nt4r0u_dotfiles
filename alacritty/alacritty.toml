@@ -1,0 +1,42 @@
+[general]
+import = ["theme.toml"]
+
+[terminal.shell]
+program = "/usr/bin/zsh"
+args = ["-l"]
+
+[window]
+startup_mode = "Maximized"
+decorations = "None"
+opacity = 0.80
+
+[window.padding]
+x = 20
+y = 20
+
+[font]
+size = 10.8
+
+[font.normal]
+family = "Hurmit Nerd Font"
+style = "Regular"
+
+[font.bold]
+family = "Hurmit Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "Hurmit Nerd Font"
+style = "Italic"
+
+[font.bold_italic]
+family = "Hurmit Nerd Font"
+style = "Bold Italic"
+
+[cursor.style]
+shape = "Underline"
+blinking = "Always"
+
+[selection]
+save_to_clipboard = true
+

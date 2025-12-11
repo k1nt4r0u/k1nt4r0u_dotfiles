@@ -1,0 +1,33 @@
+# === Basic settings ===
+set adjust-open "width"
+set selection-clipboard clipboard
+set statusbar-basename true
+set recolor false
+set smooth-scroll true
+set page-padding 5
+set scroll-step 100
+set zoom-step 5
+
+set default-bg "#0C1117"          # nền tối dịu hơn đen thuần
+set default-fg "#DFFBFF"          # chữ trắng xanh sáng
+set statusbar-bg "#0D1B2A"        # xanh đen đậm
+set statusbar-fg "#48CAE4"        # xanh biển sáng
+set highlight-color "#00B4D8"     # xanh cyan sáng nổi bật
+set highlight-active-color "#90E0EF"
+set recolor-lightcolor "#0C1117"  # màu nền khi recolor
+set recolor-darkcolor "#DFFBFF"   # màu chữ khi recolor
+
+set recolor true
+
+map u scroll half-up
+map d scroll half-down
+map J navigate next
+map K navigate previous
+map r reload
+map R rotate
+map + zoom in
+map - zoom out
+map f toggle_fullscreen
+
+set show-statusbar true
+

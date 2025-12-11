@@ -1,0 +1,83 @@
+set shell zsh
+set shellopts '-eu'
+set ifs "\n"
+set scrolloff 10
+set icons true
+set drawbox false
+set hidden true
+set ignorecase true
+set cursorpreviewfmt "\033[7m"
+
+set previewer ctpv
+set cleaner ctpvclear
+
+&ctpv -s $id
+&ctpvquit $id
+
+set promptfmt "\033[34;1m%u\033[0m@\033[36;1m%h\033[0m:\033[32;1m%w\033[0m"
+
+map e $swappy -f "$f"
+map 
+map <f-5> source ~/.config/lf/lfrc
+
+cmd open ${{
+    if [ -d "$f" ]; then
+        lf -remote "send $id cd \"$f\""
+        exit 0
+    fi
+    focus_mode() {
+        alacritty msg config window.padding.x=3 window.padding.y=3 &
+    }
+    normal_mode() {
+        alacritty msg config window.padding.x=3 window.padding.y=3 &
+    }
+    case "$f" in
+        *.apk)
+            setsid -f jadx-gui "$f" >/dev/null 2>&1
+            exit 0
+            ;;
+        *.c|*.cpp|*.h|*.hpp|*.py|*.rs|*.go|*.js|*.ts|*.lua|*.sh|*.zsh|*.conf|*.txt|*.md|*.json|*.xml|*.yaml|*.toml|*.ini)
+            focus_mode
+            nvim "$f"
+            normal_mode
+            exit 0
+            ;;
+    esac
+    mime=$(file --mime-type -bL -- "$f")
+    case "$mime" in
+        application/x-executable|application/x-pie-executable|application/x-sharedlib)
+            setsid -f /home/kintarou/tools/ida-pro-9.0/ida "$f" >/dev/null 2>&1
+            ;;
+        text/*|inode/x-empty)
+            focus_mode
+            nvim "$f"
+            normal_mode
+            ;;
+        *)
+            setsid -f xdg-open "$f" >/dev/null 2>&1
+            ;;
+    esac
+}}
+
+map <enter> open
+map l open
+
+cmd mkfile %touch "$@"
+map af push :mkfile<space>  
+
+cmd mkdir %mkdir -p "$@"
+map ad push :mkdir<space>
+
+map <delete> %trash-put $fx
+
+cmd delete_hard ${{
+    clear
+    echo -n "You sure permanently delete $fx? [Y/n]: "
+    read ans
+    [ "$ans" = "y" ] && rm -rf $fx
+}}
+map D delete_hard
+
+cmd rename %mv "$f" "$@"
+map r push :rename<space>
+

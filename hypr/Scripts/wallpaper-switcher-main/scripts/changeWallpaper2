@@ -1,0 +1,15 @@
+#!/bin/bash
+
+DIR=$HOME/Pictures/aesthetic
+PICS=($(ls ${DIR}))
+
+RANDOMPICS=${PICS[$RANDOM % ${#PICS[@]}]}
+
+if [[ $(pidof swaybg) ]]; then
+    pkill swaybg
+fi
+
+swww query || swww-daemon
+
+#change-wallpaper using swww
+swww img ${DIR}/mybackground.jpg --transition-fps 60 --transition-type any --transition-duration 3
