@@ -1,6 +1,5 @@
 #!/bin/bash
 
-## Files
 CONFIG="$HOME/.config/hypr/Scripts/wallpaper-switcher-main/wofi/config"
 STYLE="$HOME/.config/hypr/Scripts/wallpaper-switcher-main/wofi/style.css"
 COLORS="$HOME/.config/hypr/Scripts/wallpaper-switcher-main/wofi/colors"
@@ -33,6 +32,13 @@ menu() {
     printf "7.Forest\n"
     printf "8.Grassland\n"
     printf "9.Japan\n"
+    printf "10.Whale\n"
+    printf "11.Canel\n"
+    printf "12.Coast\n"
+	printf "13.House on the hill\n"
+	printf "14.Haunted\n"
+	printf "15.Ocean2\n"
+	printf "16.Reze\n"
 }
 
 swww query || swww-daemon
@@ -41,45 +47,69 @@ main() {
     choice=$(menu | ${wofi_command} | cut -d. -f1)
     case $choice in
     1)
-        swww img ${DIR}/mybackground.jpg --transition-fps 60 --transition-type any --transition-duration 3
+        swww img ${DIR}/mybackground.jpg --transition-fps 60 --transition-type wave --transition-duration 5
         return
         ;;
     2)
-        swww img ${DIR}/Anime-Japan-Street.png --transition-fps 60 --transition-type any --transition-duration 3
+        swww img ${DIR}/Anime-Japan-Street.png --transition-fps 60 --transition-type wave --transition-duration 5
         return
         ;;
     3)
-        swww img ${DIR}/Dreamy-Aesthetic-Home-Under-Moonlight.png --transition-fps 60 --transition-type any --transition-duration 3
+        swww img ${DIR}/Dreamy-Aesthetic-Home-Under-Moonlight.png --transition-fps 60 --transition-type wave --transition-duration 5
         return
         ;;
     4)
-        swww img ${DIR}/sky.jpg --transition-fps 60 --transition-type any --transition-duration 3
+        swww img ${DIR}/sky.jpg --transition-fps 60 --transition-type wave --transition-duration 5
         return
         ;;
     5)
-        swww img ${DIR}/ocean.jpg --transition-fps 60 --transition-type any --transition-duration 3
+        swww img ${DIR}/ocean.jpg --transition-fps 60 --transition-type wave --transition-duration 5
         return
         ;;
     6)
-        swww img ${DIR}/idk.jpg --transition-fps 60 --transition-type any --transition-duration 3
+        swww img ${DIR}/idk.jpg --transition-fps 60 --transition-type wave --transition-duration 5
         return
         ;;
     7)
-        swww img ${DIR}/Forest.png --transition-fps 60 --transition-type any --transition-duration 3
+        swww img ${DIR}/Forest.png --transition-fps 60 --transition-type wave --transition-duration 5
         return
         ;;
     8)
-        swww img ${DIR}/grassland.png --transition-fps 60 --transition-type any --transition-duration 3
+        swww img ${DIR}/grassland.png --transition-fps 60 --transition-type wave --transition-duration 5
         return
         ;;
     9)
-        swww img ${DIR}/winter_japan.png --transition-fps 60 --transition-type any --transition-duration 3
+        swww img ${DIR}/winter_japan.png --transition-fps 60 --transition-type wave --transition-duration 5
         return
         ;;
     10)
-        swww img ${DIR}/${RANDOMPICS} --transition-fps 30 --transition-type any --transition-duration 3
+        swww img ${DIR}/whale.png --transition-fps 60 --transition-type wave --transition-duration 5
         return
         ;;
+    11)
+        swww img ${DIR}/canel.png --transition-fps 60 --transition-type wave --transition-duration 5
+        return
+        ;;
+    12)
+        swww img ${DIR}/Coast.png --transition-fps 60 --transition-type wave --transition-duration 5
+        return
+        ;;
+	13)
+		swww img ${DIR}/idk.png --transition-fps 60 --transition-type wave --transition-duration 5
+		return
+		;;
+	14)
+		swww img ${DIR}/Haunted.png --transition-fps 60 --transition-type wave --transition-duration 5
+		return
+		;;
+	15)
+		swww img ${DIR}/ocean.png --transition-fps 60 --transition-type wave --transition-duration 5
+		return
+		;;	
+	16)
+		swww img ${DIR}/reze.png --transition-fps 60 --transition-type wave --transition-duration 5
+		return
+		;;
     esac
 }
 

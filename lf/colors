@@ -1,20 +1,49 @@
+cmd     117 default bold
+border  111 default
+cursor  0   123
+dir     75  default bold
+file    253 default
+exe     121 default bold
 
-cmd   blue  default bold  
-dir   blue  default bold  
-file  cyan  default       
-exe   green default bold  
+*.zip   147 default
+*.tar   147 default
+*.gz    147 default
+*.rar   147 default
+*.7z    147 default
+*.xz    147 default
+*.bz2   147 default
 
-*.zip 5 default
-*.tar 5 default
-*.gz  5 default
-*.rar 5 default
+*.conf  159 default
+*.ini   159 default
+*.yaml  159 default
+*.json  159 default
+*.toml  159 default
 
-*.lua  cyan default
-*.conf cyan default
-*.sh   green default
-*.py   blue default
+*.sh    121 default
+*.zsh   121 default
+*.lua   117 default
+*.py    117 default
+*.js    117 default
+*.go    117 default
+*.rs    117 default
+*.c     117 default
+*.cpp   117 default
 
-*.jpg  magenta default
-*.png  magenta default
-*.mp4  magenta default
-border blue default
+*.jpg   219 default
+*.jpeg  219 default
+*.png   219 default
+*.gif   219 default
+*.webp  219 default
+*.svg   219 default
+
+*.mp4   216 default
+*.mkv   216 default
+*.mov   216 default
+*.avi   216 default
+
+*.mp3   229 default
+*.flac  229 default
+*.wav   229 default
+*.ogg   229 default
+
+.* 245 default

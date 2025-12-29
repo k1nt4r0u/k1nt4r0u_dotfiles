@@ -1,144 +1,125 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
-    "type": "file",
-    "source": "~/.config/fastfetch/cat.txt",
-    "color": { "1": "blue" },
+    "source": "~/.config/fastfetch/arch.txt",
+    "color": {
+      "1": "blue"
+    },
+    "height": 15,
+    "width": 40,
     "padding": {
-      "top": 2,
-      "right": 6,
-      "left": 2
+      "top": 1,
+      "right": 5
     }
+  },
+  "display": {
+    "separator": " ➜  "
   },
   "modules": [
     "break",
     {
-      "type": "custom",
-      "format": "\u001b[90m┌──────────────────────Hardware──────────────────────┐"
-    },
-    {
-      "type": "host",
-      "key": " PC",
-      "keyColor": "blue"
-    },
-    {
-      "type": "cpu",
-      "key": "│ ├",
-      "showPeCoreCount": true,
-      "keyColor": "blue"
-    },
-    {
-      "type": "gpu",
-      "key": "│ ├",
-      "detectionMethod": "pci",
-      "keyColor": "blue"
-    },
-    {
-      "type": "display",
-      "key": "│ ├󱄄",
-      "keyColor": "blue"
-    },
-    {
-      "type": "disk",
-      "key": "│ ├󰋊",
-      "keyColor": "blue"
-    },
-    {
-      "type": "memory",
-      "key": "│ ├",
-      "keyColor": "blue"
-    },
-    {
-      "type": "swap",
-      "key": "└ └󰓡 ",
-      "keyColor": "blue"
-    },
-    {
-      "type": "custom",
-      "format": "\u001b[90m└────────────────────────────────────────────────────┘"
-    },
-    "break",
-    {
-      "type": "custom",
-      "format": "\u001b[90m┌──────────────────────Software──────────────────────┐"
-    },
-    {
-      "type": "command",
-      "key": "\ue900 OS",
-      "keyColor": "blue",
-      "text": "version=$(omarchy-version); echo \"Arch $version\""
-    },
-    {
-      "type": "command",
-      "key": "│ ├󰘬",
-      "keyColor": "blue",
-      "text": "branch=$(omarchy-version-branch); echo \"$branch\""
+      "type": "os",
+      "key": " DISTRO",
+      "keyColor": "34"
     },
     {
       "type": "kernel",
-      "key": "│ ├",
-      "keyColor": "blue"
-    },
-    {
-      "type": "wm",
-      "key": "│ ├",
-      "keyColor": "blue"
-    },
-    {
-      "type": "de",
-      "key": " DE",
-      "keyColor": "blue"
-    },
-    {
-      "type": "terminal",
-      "key": "│ ├",
-      "keyColor": "blue"
+      "key": " ├  ",
+      "keyColor": "34"
     },
     {
       "type": "packages",
-      "key": "│ ├󰏖",
-      "keyColor": "blue"
+      "key": " ├ 󰏖 ",
+      "keyColor": "34"
     },
     {
-      "type": "wmtheme",
-      "key": "│ ├󰉼",
-      "keyColor": "blue"
+      "type": "shell",
+      "key": " ├  ",
+      "keyColor": "34"
+    },
+	    {
+      "type": "uptime",
+      "key": " ├ 󰔛 ",
+      "keyColor": "34"
     },
     {
       "type": "command",
-      "key": "│ ├󰸌",
-      "keyColor": "blue",
-      "text": "theme=$(omarchy-theme-current); echo -e \"$theme \\e[38m●\\e[37m●\\e[36m●\\e[35m●\\e[34m●\\e[33m●\\e[32m●\\e[31m●\""
-    },
-    {
-      "type": "terminalfont",
-      "key": "└ └",
-      "keyColor": "blue"
-    },
-    {
-      "type": "custom",
-      "format": "\u001b[90m└────────────────────────────────────────────────────┘"
+      "key": " └  ",
+      "keyColor": "34",
+      "text": "birth_install=$(head -n1 /var/log/pacman.log | cut -d ' ' -f 1 | tr -d '[]'); current=$(date +%s); install_sec=$(date -d $birth_install +%s); echo \"$(( ($current - $install_sec) / 86400 )) days\""
     },
     "break",
     {
-      "type": "custom",
-      "format": "\u001b[90m┌────────────────────Uptime / Age────────────────────┐"
+      "type": "wm",
+      "key": " DE/WM",
+      "keyColor": "34"
     },
     {
-      "type": "command",
-      "key": "󱦟 OS Age",
-      "keyColor": "blue",
-      "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
+      "type": "wmtheme",
+      "key": " ├ 󰉼 ",
+      "keyColor": "34"
     },
     {
-      "type": "uptime",
-      "key": "󱫐 Uptime",
-      "keyColor": "blue"
+      "type": "icons",
+      "key": " ├ 󰀻 ",
+      "keyColor": "34"
     },
     {
-      "type": "custom",
-      "format": "\u001b[90m└────────────────────────────────────────────────────┘"
+      "type": "cursor",
+      "key": " ├  ",
+      "keyColor": "34"
     },
+    {
+      "type": "terminal",
+      "key": " ├  ",
+      "keyColor": "34"
+    },
+    {
+      "type": "terminalfont",
+      "key": " └  ",
+      "keyColor": "34"
+    },
+    "break",
+    {
+      "type": "host",
+      "format": "{2}",
+      "key": "󰌢 SYSTEM",
+      "keyColor": "34"
+    },
+    {
+      "type": "cpu",
+      "format": "{1} ({3}) @ {7} GHz",
+      "key": " ├  ",
+      "keyColor": "34"
+    },
+    {
+      "type": "gpu",
+      "format": "{2}",
+      "key": " ├ 󰢮 ",
+      "keyColor": "34"
+    },
+    {
+      "type": "memory",
+      "key": " ├  ",
+      "keyColor": "34"
+    },
+    {
+      "type": "swap",
+      "key": " ├ 󰓡 ",
+      "keyColor": "34"
+    },
+    {
+      "type": "disk",
+      "key": " ├ 󰋊 ",
+      "keyColor": "34"
+    },
+    {
+      "type": "display",
+      "key": " └  ",
+      "compactType": "original-with-refresh-rate",
+      "keyColor": "34"
+    },
+    "break",
     "break"
   ]
 }

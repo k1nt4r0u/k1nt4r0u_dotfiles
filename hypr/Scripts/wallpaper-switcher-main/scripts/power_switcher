@@ -1,0 +1,48 @@
+#!/bin/bash
+
+CONFIG="$HOME/.config/hypr/Scripts/wallpaper-switcher-main/wofi/config"
+STYLE="$HOME/.config/hypr/Scripts/wallpaper-switcher-main/wofi/style.css"
+COLORS="$HOME/.config/hypr/Scripts/wallpaper-switcher-main/wofi/colors"
+
+if pgrep -x "wofi" > /dev/null; then
+    pkill -x wofi
+    exit 0
+fi
+
+wofi_command="wofi --show dmenu \
+			--prompt 'Select Power Mode...' \
+			--conf ${CONFIG} --style ${STYLE} --color ${COLORS} \
+			--width=300 --height=200 \
+			--cache-file=/dev/null \
+			--hide-scroll --no-actions \
+			--define=matching=fuzzy"
+
+menu() {
+    printf "1. Performance\n"
+    printf "2. Balanced\n"
+    printf "3. Power Saver\n"
+}
+
+main() {
+    choice=$(menu | ${wofi_command} | cut -d. -f1)
+    
+    case $choice in
+    1)
+        powerprofilesctl set performance
+		notify-send -u critical -t 3000 "SYSTEM POWER" "Activated Performance Mode"
+        ;;
+    2)
+        powerprofilesctl set balanced
+        notify-send -u normal -t 3000 "SYSTEM POWER" "Activated Balanced Mode"
+        ;;
+    3)
+        powerprofilesctl set power-saver
+        notify-send -u low -t 3000 "SYSTEM POWER" "Activated Power-saver Mode"
+        ;;
+    *)
+        exit 1
+        ;;
+    esac
+}
+
+main

@@ -1,0 +1,83 @@
+configuration {
+	modi:                       "drun,run,filebrowser,window";
+    show-icons:                 true;
+    display-drun:               "APPS";
+    display-run:                "RUN";
+    display-filebrowser:        "FILES";
+    display-window:             "WINDOW";
+	drun-display-format:        "{name}";
+	window-format:              "{w} · {c} · {t}";
+}
+
+* {
+	background-color: transparent;
+    text-color: #f8f8f2;
+    font: "JetBrains Mono Nerd Font 12";
+    ellipsize: none;
+}
+
+window {
+    width: 50%;
+    height: 60%;
+    border: 1px;
+    border-color: #5584D0;
+    border-radius: 0px;
+	background-color: rgba(40, 42, 54, 0.5);
+}
+
+mainbox {
+    children: [ inputbar, listview ];
+    spacing: 10px;
+    padding: 20px;
+}
+
+inputbar {
+    children: [ entry ];
+    spacing: 10px;
+    padding: 10px;
+    border: 1px;
+    border-color: #44475a;
+    border-radius: 3px;
+    background-color: rgba(0,0,0,0);
+}
+
+prompt {
+    text-color: #f8f8f2;
+}
+
+entry {
+    placeholder: "Search";
+}
+
+listview {
+    lines: 8;
+    columns: 1;
+    cycle: true;
+    dynamic: true;
+    layout: vertical;
+    show-icons: true;
+    highlight: "<b>";
+}
+
+element {
+    padding: 10px;
+    children: [ element-icon, element-text ];
+    spacing: 10px;
+    background-color: rgba(0,0,0,0);
+}
+
+element-icon {
+    size: 1em;
+}
+
+element-text {
+    vertical-align: 0.5;
+    underline: none;
+    ellipsize: none;
+}
+
+element selected {
+    background-color: rgba(85, 132, 208, 0.5);
+    text-color: #f8f8f2;
+    border-radius: 3px;
+}

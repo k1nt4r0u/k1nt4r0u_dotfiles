@@ -1,12 +1,23 @@
 spawn-at-startup "waybar"
-spawn-at-startup "fcitx-5 &"
+spawn-at-startup "xdg-desktop-portal-wlr"
+spawn-at-startup "xdg-desktop-portal"
+spawn-at-startup "xdg-desktop-portal-gnome"
+spawn-at-startup "fcitx-5"
 spawn-at-startup "~/.config/hypr/Scripts/wallpaper-switcher-main/scripts/changeWallpaper2"
-spawn-sh-at-startup "foot --server"
 spawn-at-startup "pipewire"
-
+spawn-at-startup "blueman-applet"
+spawn-at-startup "nm-applet"
+spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+spawn-at-startup "hypridle"
+spawn-at-startup "xwayland-satellite"
+spawn-at-startup "env" "WLR_DRM_DEVICES=/dev/dri/card2" "swaync"
+spawn-at-startup "wl-paste" "--watch" "cliphist" "store"
+spawn-at-startup "/home/kintarou/.config/hypr/Scripts/watch_iphone"
 cursor {
-	xcursor-theme "Hoshimachi-Suisei"
+	// xcursor-theme "Hoshimachi-Suisei"
+	xcursor-theme "Ayaka-Kamisato-Springbloom"
 	hide-when-typing
+	xcursor-size 37
 }
 
 environment {
@@ -19,16 +30,42 @@ window-rule {
 }
 
 window-rule {
-	match app-id="brave-browser"
-	match app-id="vesktop"
-	match app-id="evince"
-	match app-id="ida"
-	default-column-width { fixed 1905; }
+	match app-id="Evince"
+	default-column-width { fixed 1300; }
 	default-window-height { fixed 1080; }
 }
 
 window-rule {
+    match app-id="^ueberzugpp_"
+    open-floating true
+    border { off; }
+    focus-ring { off; }
+    shadow { off; }
+    open-focused false
+}
+
+window-rule {
+	match app-id="ghidra-Ghidra"
+	match app-id="com.hex-rays.ida"
+	match app-id="vesktop"
+	match app-id="ida"
+	match app-id="Zotero"
+	match app-id="spotify"
+	match app-id="librewolf"
+	default-column-width { fixed 1910; }
+	default-window-height { fixed 1082; }
+}
+
+window-rule {
+    match app-id="LibreWolf" title="^(Open|Save|Enter|File|Upload|Extension).*"
+    open-floating true
+}
+
+window-rule {
 	match app-id="thunar"
+	match app-id="pavucontrol"
+	match app-id="blueman-manager"
+	match app-id="nm-connection-editor"
 	open-floating true
 	default-column-width { fixed 1000; }
 	default-window-height { fixed 600; }
@@ -36,6 +73,8 @@ window-rule {
 
 window-rule {
 	match app-id="Alacritty"
+	default-column-width { fixed 1910; }
+	default-window-height { fixed 1082; }
 	draw-border-with-background false
 }
 
@@ -50,7 +89,7 @@ input {
 		layout "us"
 		}
 		repeat-rate	50
-		repeat-delay	400 
+		repeat-delay 175 
 		numlock
 	}
 
@@ -64,7 +103,7 @@ input {
 		// drag false
 		// drag-lock
 		natural-scroll
-		// accel-speed 0.2
+		accel-speed 0.4
 		// accel-profile "flat"
 		// scroll-method "two-finger"
 		// disabled-on-external-mouse
@@ -133,7 +172,7 @@ output "eDP-1" {
 // https://yalter.github.io/niri/Configuration:-Layout
 layout {
 	// Set gaps around windows in logical pixels.
-	gaps 8
+	gaps 5
 
 	// When to center a column when changing focus, options are:
 	// - "never", default behavior, focusing an off-screen column will keep at the left
@@ -181,7 +220,7 @@ layout {
 		// off
 
 		// How many logical pixels the ring extends out from the windows.
-		width 1.5
+		width 1.3
 
 		// Colors can be set in a variety of ways:
 		// - CSS named colors: "red"
@@ -310,13 +349,66 @@ screenshot-path "~/Pictures/Screenshots/Screenshot_from_%Y-%m-%d %H-%M-%S.png"
 // Animation settings.
 // The wiki explains how to configure individual animations:
 // https://yalter.github.io/niri/Configuration:-Animations
-animations {
-	// Uncomment to turn off all animations.
-	// off
 
-	// Slow down all animations by this factor. Values below 1 speed them up instead.
-	// slowdown 3.0
+
+animations {
+    // Uncomment to turn off all animations.
+    // You can also put "off" into each individual animation to disable it.
+    // off
+
+    // Slow down all animations by this factor. Values below 1 speed them up instead.
+    // slowdown 3.0
+
+    // Individual animations.
+
+    workspace-switch {
+        spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
+    }
+
+    window-open {
+        duration-ms 150
+        curve "ease-out-expo"
+    }
+
+    window-close {
+        duration-ms 150
+        curve "ease-out-quad"
+    }
+
+    horizontal-view-movement {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    }
+
+    window-movement {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    }
+
+    window-resize {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    }
+
+    config-notification-open-close {
+        spring damping-ratio=0.6 stiffness=1000 epsilon=0.001
+    }
+
+    exit-confirmation-open-close {
+        spring damping-ratio=0.6 stiffness=500 epsilon=0.01
+    }
+
+    screenshot-ui-open {
+        duration-ms 200
+        curve "ease-out-quad"
+    }
+
+    overview-open-close {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    }
+
+    recent-windows-close {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.001
+    }
 }
+
 
 // Window rules let you adjust behavior for individual windows.
 // Find more information on the wiki:
@@ -339,13 +431,17 @@ binds {
 	// shows a list of important hotkeys.
 	Mod+Shift+Slash { show-hotkey-overlay; }
 	Mod+Alt+F { spawn "~/.config/hypr/Scripts/wallpaper-switcher-main/scripts/wallpaper-switcher"; }
-	// Suggested binds for running programs: terminal, app launcher, screen locker.
-	Mod+D { spawn "~/.config/rofi.kintarou/files/launchers/type-6/launcher.sh"; }
+	Mod+D { spawn "rofi" "-show" "drun" "-theme" "/home/kintarou/.config/rofi/drun.rasi"; }
+	Mod+V { spawn "~/.config/hypr/Scripts/wallpaper-switcher-main/scripts/ShowClipboard"; }
 	Mod+E { spawn "thunar"; }
-	Mod+Alt+O {spawn "alacritty" "-e" "sudo" "poweroff"; }
+	Mod+Alt+O { spawn "alacritty" "-e" "doas" "poweroff"; }
 	Mod+Return { spawn "alacritty"; }
 	Mod+Alt+L { spawn "hyprlock"; }
 	Mod+Alt+R { spawn "~/.config/waybar/scripts/launch.sh"; }
+	Mod+Alt+K { spawn "~/.config/hypr/Scripts/wallpaper-switcher-main/scripts/power_switcher"; }
+	Mod+X { spawn "wlogout"; }
+	Mod+B { spawn "librewolf"; }
+	Mod+Q { spawn "sh" "-c" "grim -g \"$(slurp)\" - | zbarimg --raw - | tr -d '\n' | wl-copy && notify-send 'QR Code Detected' 'Nội dung đã nằm trong clipboard, dán ra đi homie!'"; }
 	// Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
 	// Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
 	// For example, this is a standard bind to toggle the screen reader (orca).
@@ -363,10 +459,10 @@ binds {
 	// but you need to manually put each argument in separate "" quotes.
 	XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+5%"; }
 	XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "5%-"; }
-	XF86AudioNext allow-when-locked=true {spawn "playerctl next";}
-	XF86AudioPause allow-when-locked=true {spawn "playerctl play-pause";}
-	XF86AudioPlay allow-when-locked=true {spawn "playerctl play-pause";}
-	XF86AudioPrev allow-when-locked=true {spawn "playerctl previous";}
+	XF86AudioNext allow-when-locked=true {spawn "playerctl" "next";}
+	XF86AudioPause allow-when-locked=true {spawn "playerctl" "play-pause";}
+	XF86AudioPlay allow-when-locked=true {spawn "playerctl" "play-pause";}
+	XF86AudioPrev allow-when-locked=true {spawn "playerctl" "previous";}
 	// Open/close the Overview: a zoomed-out view of workspaces and windows.
 	// You can also move the mouse into the top-left hot corner,
 	// or do a four-finger swipe up on a touchpad.
@@ -400,29 +496,29 @@ binds {
 	// Mod+K	 { focus-window-or-workspace-up; }
 	// Mod+Ctrl+J	 { move-window-down-or-to-workspace-down; }
 	// Mod+Ctrl+K	 { move-window-up-or-to-workspace-up; }
-
-	Mod+Home { focus-column-first; }
-	Mod+End  { focus-column-last; }
-	Mod+Ctrl+Home { move-column-to-first; }
-	Mod+Ctrl+End  { move-column-to-last; }
-
-	Mod+Ctrl+Left  { focus-monitor-left; }
-	Mod+Ctrl+Down  { focus-monitor-down; }
-	Mod+Ctrl+Up	{ focus-monitor-up; }
-	Mod+Ctrl+Right { focus-monitor-right; }
-	Mod+Ctrl+H	 { focus-monitor-left; }
-	Mod+Ctrl+J	 { focus-monitor-down; }
-	Mod+Ctrl+K	 { focus-monitor-up; }
-	Mod+Ctrl+L	 { focus-monitor-right; }
-
-	Mod+Shift+Ctrl+Left  { move-column-to-monitor-left; }
-	Mod+Shift+Ctrl+Down  { move-column-to-monitor-down; }
-	Mod+Shift+Ctrl+Up	{ move-column-to-monitor-up; }
-	Mod+Shift+Ctrl+Right { move-column-to-monitor-right; }
-	Mod+Shift+Ctrl+H	 { move-column-to-monitor-left; }
-	Mod+Shift+Ctrl+J	 { move-column-to-monitor-down; }
-	Mod+Shift+Ctrl+K	 { move-column-to-monitor-up; }
-	Mod+Shift+Ctrl+L	 { move-column-to-monitor-right; }
+	//
+	// Mod+Home { focus-column-first; }
+	// Mod+End  { focus-column-last; }
+	// Mod+Ctrl+Home { move-column-to-first; }
+	// Mod+Ctrl+End  { move-column-to-last; }
+	//
+	// Mod+Ctrl+Left  { focus-monitor-left; }
+	// Mod+Ctrl+Down  { focus-monitor-down; }
+	// Mod+Ctrl+Up	{ focus-monitor-up; }
+	// Mod+Ctrl+Right { focus-monitor-right; }
+	// Mod+Ctrl+H	 { focus-monitor-left; }
+	// Mod+Ctrl+J	 { focus-monitor-down; }
+	// Mod+Ctrl+K	 { focus-monitor-up; }
+	// Mod+Ctrl+L	 { focus-monitor-right; }
+	//
+	// Mod+Shift+Ctrl+Left  { move-column-to-monitor-left; }
+	// Mod+Shift+Ctrl+Down  { move-column-to-monitor-down; }
+	// Mod+Shift+Ctrl+Up	{ move-column-to-monitor-up; }
+	// Mod+Shift+Ctrl+Right { move-column-to-monitor-right; }
+	// Mod+Shift+Ctrl+H	 { move-column-to-monitor-left; }
+	// Mod+Shift+Ctrl+J	 { move-column-to-monitor-down; }
+	// Mod+Shift+Ctrl+K	 { move-column-to-monitor-up; }
+	// Mod+Shift+Ctrl+L	 { move-column-to-monitor-right; }
 
 	// Alternatively, there are commands to move just a single window:
 	// Mod+Shift+Ctrl+Left  { move-window-to-monitor-left; }
@@ -432,12 +528,12 @@ binds {
 	// Mod+Shift+Ctrl+Left  { move-workspace-to-monitor-left; }
 	// ...
 
-	Mod+Page_Down	  { focus-workspace-down; }
-	Mod+Page_Up		{ focus-workspace-up; }
+	// Mod+Page_Down	  { focus-workspace-down; }
+	// Mod+Page_Up		{ focus-workspace-up; }
 	Mod+U			  { focus-workspace-down; }
 	Mod+I			  { focus-workspace-up; }
-	Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
-	Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
+	// Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
+	// Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
 	Mod+Ctrl+U		 { move-column-to-workspace-down; }
 	Mod+Ctrl+I		 { move-column-to-workspace-up; }
 
@@ -445,8 +541,8 @@ binds {
 	// Mod+Ctrl+Page_Down { move-window-to-workspace-down; }
 	// ...
 
-	Mod+Shift+Page_Down { move-workspace-down; }
-	Mod+Shift+Page_Up   { move-workspace-up; }
+	// Mod+Shift+Page_Down { move-workspace-down; }
+	// Mod+Shift+Page_Up   { move-workspace-up; }
 	Mod+Shift+U		 { move-workspace-down; }
 	Mod+Shift+I		 { move-workspace-up; }
 
@@ -551,21 +647,21 @@ binds {
 	// * adjust width as a percentage of screen width: "-10%" or "+10%"
 	// Pixel sizes use logical, or scaled, pixels. I.e. on an output with scale 2.0,
 	// set-column-width "100" will make the column occupy 200 physical screen pixels.
-	Mod+Minus { set-column-width "-10%"; }
-	Mod+Equal { set-column-width "+10%"; }
+	Mod+Minus { set-column-width "-5%"; }
+	Mod+Equal { set-column-width "+5%"; }
 
 	// Finer height adjustments when in column with other windows.
-	Mod+Shift+Minus { set-window-height "-10%"; }
-	Mod+Shift+Equal { set-window-height "+10%"; }
+	Mod+Shift+Minus { set-window-height "-5%"; }
+	Mod+Shift+Equal { set-window-height "+5%"; }
 
 	// Move the focused window between the floating and the tiling layout.
-	Mod+V	   { toggle-window-floating; }
+	Mod+G { toggle-window-floating; }
 	Mod+Shift+V { switch-focus-between-floating-and-tiling; }
 
 	// Toggle tabbed column display mode.
 	// Windows in this column will appear as vertical tabs,
 	// rather than stacked on top of each other.
-	Mod+Q { toggle-column-tabbed-display; }
+	// Mod+Q { toggle-column-tabbed-display; }
 
 	// Actions to switch layouts.
 	// Note: if you uncomment these, make sure you do NOT have

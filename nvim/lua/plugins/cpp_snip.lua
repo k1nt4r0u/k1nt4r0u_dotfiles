@@ -4,7 +4,7 @@ local s = ls.snippet
 local i = ls.insert_node
 
 ls.add_snippets("cpp", {
-    s("code", fmt([[
+    s("cp", fmt([[
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -40,3 +40,26 @@ int main() {
         delimiters = "[]"
     }))
 })
+
+ls.add_snippets("cpp", {
+    s("code", fmt([[
+#include <bits/stdc++.h>
+using namespace std;
+[1]
+
+void solve() {
+    [2]
+}
+
+int main() {
+    solve();
+    return 0;
+}
+    ]], {
+        i(1, "// defining section"),
+        i(2, "// coding section"),
+    }, {
+        delimiters = "[]"
+    }))
+})
+

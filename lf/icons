@@ -51,6 +51,28 @@ fi             # FILE
 # ex              # EXEC
 # fi             # FILE
 
+# fonts
+*.otf       
+*.ttf       
+*.woff      
+*.woff2     
+
+# disk images / executables
+*.iso       
+*.img       
+*.qcow2     
+*.exe       
+*.msi       
+*.apk       
+*.appimage  
+
+# misc
+*.lock      
+*.log       
+*.nix       
+*.service   
+*.csv       
+
 # file extensions (vim-devicons)
 *.styl          
 *.sass          
@@ -174,7 +196,6 @@ fi             # FILE
 *.sol           󰡪
 *.pem           
 
-# file names (vim-devicons) (case-insensitive not supported in lf)
 *gruntfile.coffee       
 *gruntfile.js           
 *gruntfile.ls           
@@ -312,7 +333,6 @@ Vagrantfile             
 *.gif   
 *.bmp   
 *.pbm   
-*.pgm   
 *.ppm   
 *.tga   
 *.xbm   
@@ -324,27 +344,14 @@ Vagrantfile             
 *.svgz  
 *.mng   
 *.pcx   
-*.mov   
-*.mpg   
-*.mpeg  
-*.m2v   
-*.mkv   
-*.webm  
-*.ogm   
-*.mp4   
-*.m4v   
-*.mp4v  
 *.vob   
 *.qt    
 *.nuv   
-*.wmv   
 *.asf   
 *.rm    
 *.rmvb  
 *.flc   
-*.avi   
 *.fli   
-*.flv   
 *.gl    
 *.dl    
 *.xcf   
@@ -355,23 +362,39 @@ Vagrantfile             
 *.ogv   
 *.ogx   
 
+# video formats
+*.avi       
+*.flv       
+*.m2v       
+*.m4v       
+*.mkv       
+*.mov       
+*.mp4       
+*.mp4v      
+*.mpeg      
+*.mpg       
+*.ogm       
+*.webm      
+*.wmv       
+
 # audio formats (extensions from dircolors defaults)
-*.aac   
 *.au    
-*.flac  
-*.m4a   
-*.mid   
-*.midi  
 *.mka   
-*.mp3   
 *.mpc   
-*.ogg   
 *.ra    
-*.wav   
 *.oga   
-*.opus  
 *.spx   
 *.xspf  
+*.aac       
+*.flac      
+*.m4a       
+*.mid       
+*.midi      
+*.mp3       
+*.ogg       
+*.opus      
+*.wav       
+*.wma       
 
 # other formats
 *.pdf   

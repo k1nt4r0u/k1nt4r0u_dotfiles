@@ -31,7 +31,6 @@ keymap('i', '<Char-0xA5>', '<Plug>(copilot-previous)', default_opts)
 -- cmd+1: open left bar  
 keymap('n', '<Char-0xA4>', '<cmd>NvimTreeToggle<cr>', default_opts)
 
-
 vim.api.nvim_create_autocmd(
     {"FileType"},
     {

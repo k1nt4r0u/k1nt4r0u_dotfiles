@@ -41,6 +41,9 @@ Plug('windwp/nvim-ts-autotag')
 Plug('stevearc/conform.nvim')
 Plug('goolord/alpha-nvim')
 Plug('lervag/vimtex')
+Plug('github/copilot.vim')
+Plug('nvim-lua/plenary.nvim')
+Plug('CopilotC-Nvim/CopilotChat.nvim')
 
 vim.call('plug#end')
 
@@ -52,6 +55,7 @@ require"combinations"
 require('plugins.lualine')
 require('plugins.telescope')
 require('plugins.treesitter')
+require('plugins.chat_copilot')
 require('plugins.vimtree')
 require('plugins.barbar')
 require('plugins.cmp')
@@ -96,8 +100,9 @@ vim.opt.cursorline = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.cmdheight = 0 
 vim.opt.laststatus = 3
-
-
-
-
-
+vim.g.copilot_no_tab_map = true
+vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = "*.asm",
+  command = "set filetype=nasm",
+})

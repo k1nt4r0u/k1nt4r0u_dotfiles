@@ -6,16 +6,20 @@ program = "/usr/bin/zsh"
 args = ["-l"]
 
 [window]
-startup_mode = "Maximized"
+startup_mode = "Windowed"
 decorations = "None"
-opacity = 0.80
+opacity = 0.8
 
 [window.padding]
-x = 20
-y = 20
+x = 25 
+y = 25 
 
 [font]
-size = 10.8
+size = 11
+
+[font.offset]
+x = 0
+y = 0
 
 [font.normal]
 family = "Hurmit Nerd Font"
@@ -39,4 +43,3 @@ blinking = "Always"
 
 [selection]
 save_to_clipboard = true
-

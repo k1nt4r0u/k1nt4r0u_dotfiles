@@ -24,7 +24,7 @@ image_size=24
 
 ## Search
 exec_search=false
-hide_search=false
+hide_search=true
 parse_search=false
 insensitive=false
 

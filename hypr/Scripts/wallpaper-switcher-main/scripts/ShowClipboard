@@ -1,0 +1,28 @@
+#!/bin/bash
+
+CONFIG="$HOME/.config/hypr/Scripts/wallpaper-switcher-main/wofi/config"
+STYLE="$HOME/.config/hypr/Scripts/wallpaper-switcher-main/wofi/style.css"
+COLORS="$HOME/.config/hypr/Scripts/wallpaper-switcher-main/wofi/colors"
+
+if pgrep -x "wofi" > /dev/null; then
+    pkill -x wofi
+    exit 0
+fi
+
+selected_text=$(cliphist list | cut -d$'\t' -f2- | grep -v "^#" | grep -v "^\s*$" | head -n 20 | wofi --show dmenu \
+            --prompt 'Clean Clipboard...' \
+            --conf "${CONFIG}" --style "${STYLE}" --color "${COLORS}" \
+            --width=600 --height=400 \
+            --cache-file=/dev/null \
+            --hide-scroll --no-actions \
+            --define=matching=fuzzy)
+
+if [ -z "$selected_text" ]; then
+    exit 0
+fi
+
+selected_id=$(cliphist list | grep -F "$selected_text" | head -n 1 | cut -d$'\t' -f1)
+
+cliphist decode "$selected_id" | wl-copy
+
+notify-send "Clipboard" "$selected_text"

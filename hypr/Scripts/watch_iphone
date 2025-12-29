@@ -1,0 +1,8 @@
+#!/bin/bash
+
+WATCH_DIR="/home/kintarou/Documents/syncthing/"
+
+inotifywait -m -e create -e moved_to --format "%f" "$WATCH_DIR" | while read FILENAME
+do
+    notify-send -u normal -t 5000 -i "phone" "Hàng về! Hàng về!" "Con iPhone ghẻ vừa gửi file: $FILENAME"
+done
