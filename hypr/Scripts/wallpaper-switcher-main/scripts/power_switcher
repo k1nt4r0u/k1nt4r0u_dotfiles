@@ -29,11 +29,11 @@ main() {
     case $choice in
     1)
         powerprofilesctl set performance
-		notify-send -u critical -t 3000 "SYSTEM POWER" "Activated Performance Mode"
+		notify-send -u low -t 3000 "SYSTEM POWER" "Activated Performance Mode"
         ;;
     2)
         powerprofilesctl set balanced
-        notify-send -u normal -t 3000 "SYSTEM POWER" "Activated Balanced Mode"
+        notify-send -u low -t 3000 "SYSTEM POWER" "Activated Balanced Mode"
         ;;
     3)
         powerprofilesctl set power-saver

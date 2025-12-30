@@ -25,4 +25,4 @@ selected_id=$(cliphist list | grep -F "$selected_text" | head -n 1 | cut -d$'\t'
 
 cliphist decode "$selected_id" | wl-copy
 
-notify-send "Clipboard" "$selected_text"
+notify-send "Clipboard" "go paste it lol"

@@ -4,7 +4,6 @@
 }
 
 #window {
-	/* background-color: --wofi-color0; */
 	background-color: rgba(50, 50, 50, 0.4);
 	color: --wofi-color2;
 	border: 2px solid --wofi-color1;
@@ -38,7 +37,7 @@
 }
 
 #text:selected {
-	color: --wofi-color0;
+	color: #7390ea;
 }
 
 #entry {
@@ -47,7 +46,7 @@
 
 #entry:selected {
 	background-color: --wofi-color3;
-	background: #7390ea;
+	background: transparent;
 	color: --wofi-color0;
 }
 

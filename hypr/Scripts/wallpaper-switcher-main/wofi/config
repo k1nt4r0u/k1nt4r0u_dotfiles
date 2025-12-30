@@ -22,11 +22,15 @@ allow_markup=true
 allow_images=true
 image_size=24
 
-## Search
 exec_search=false
 hide_search=true
 parse_search=false
 insensitive=false
+
+key_up=k
+key_down=j
+key_left=h
+key_right=l
 
 ## Other
 hide_scroll=true
