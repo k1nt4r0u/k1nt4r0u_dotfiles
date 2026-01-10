@@ -1,54 +1,46 @@
 {
-    "custom/arch": {
-        "format": "󰣇",
-        "tooltip": false
-
-    },
-
-	"hyprland/workspaces" : {
-		"on-click": "activate",
-		"active-only": false,
-		"all-outputs": true,
-		"format": "{}",
-		"format-icons": {
-			"urgent": "",
-			"active": "",
-			"default": ""
-		},
-		"persistent-workspaces": {
-			"*": 5
-		},
+	"custom/arch": {
+		"format": "󰣇",
+		"tooltip": false
 	},
-   	
+	"niri/workspaces": {
+		"format": "{index}",
+		"format-icons": {
+			"1": "",
+			"2": "",
+			"3": "",
+			"4": "",
+			"5": ""
+		}
+	},
 	"wlr/taskbar": {
 		"format": "{icon}",
 		"icon-size": 18,
 		"tooltip-format": "{title}",
 		"on-click": "activate",
-		"on-click-middle": "close",
+		"on-click-middle": "close"
 	},
-
-    "mpris": {
-        "format": "{player_icon} {title} - {artist}",
-        "format-paused": "{player_icon} {title} - {artist} - paused",
-        "player-icons": {
-            "default": " ",
-        },
-        "status-icons": {
-            "playing": "",
-            "paused": ""
-        },
-        "max-length": 66,
-        "on-click": "playerctl play-pause",
-        "on-scroll-up": "playerctl next",
-        "on-scroll-down": "playerctl previous",
-        "on-click-right": "playerctl stop"
-    },
-
-	"clock": {  
+	"custom/playerctl": {
+		"format": "{icon}  {text}",
+		"return-type": "json",
+		"max-length": 60,
+		"exec": "~/.config/waybar/scripts/playerctl-mpris.sh",
+		"interval": 2,
+		"on-click": "~/.config/waybar/scripts/player.sh",
+		"on-click-right": "~/.config/waybar/scripts/player-next.sh",
+		"on-click-middle": "~/.config/waybar/scripts/player-prev.sh",
+		"on-scroll-up": "~/.config/waybar/scripts/player-next.sh",
+		"on-scroll-down": "~/.config/waybar/scripts/player-prev.sh",
+		"escape": true,
+		"format-icons": {
+			"Playing": "",
+			"Paused": "",
+			"Stopped": ""
+		}
+	},
+	"clock": {
 		"interval": 1,
 		"format": "{:%H:%M}",
-		//"format": "{:%I:%M %p}", // AM PM format
 		"format-alt": "{:%A, %B %d - %H:%M}",
 		"tooltip-format": "<big>{calendar}</big>",
 		"calendar": {
@@ -65,14 +57,13 @@
 			}
 		}
 	},
-	
 	"group/hardware": {
 		"orientation": "inherit",
 		"drawer": {
 			"transition-duration": 300,
 			"children-class": "not-memory",
 			"transition-left-to-right": false
-		},        
+		},
 		"modules": [
 			"custom/system",
 			"cpu",
@@ -81,50 +72,49 @@
 			"memory"
 		]
 	},
-	
 	"custom/system": {
 		"format": "<span size='small'>  </span>",
 		"tooltip": false
 	},
-	
 	"cpu": {
 		"format": " 󰍛 {usage}% ",
 		"on-click": "kitty btop"
 	},
-	
 	"temperature": {
 		"format": " 󰈸 {temperatureC}°C ",
 		"on-click": "kitty btop"
 	},
-	
 	"disk": {
 		"interval": 30,
 		"format": " 󰋊 {percentage_used}% ",
 		"path": "/",
 		"on-click": "kitty btop"
-	}, 
-	
+	},
 	"memory": {
 		"format": "  {}% ",
 		"on-click": "kitty btop"
 	},
-	
-    "pulseaudio": {
-        "format": "{icon} {volume}%",
-        "format-bluetooth": "{icon} {volume}%",
-        "format-muted": "󰖁 Muted",
-        "format-icons": {
-            "headphone": "󰋋",
-            "headset": "󰋎", 
-            "default": ["󰕿", "󰖀", "󰕾"]
-        },
-        "tooltip": false,
-        "smooth-scrolling-threshold": 0.1,
-        "scroll-step": 5,
-        "on-click": "pavucontrol",
-        "ignored-sinks": ["Easy Effects Sink"]
-    },
-
+	"pulseaudio": {
+		"format": "{icon} {volume}%",
+		"format-bluetooth": "{icon} {volume}%",
+		"format-muted": "󰖁 Muted",
+		"format-icons": {
+			"headphone": "󰋋",
+			"headset": "󰋎",
+			"default": [
+				"󰕿",
+				"󰖀",
+				"󰕾"
+			]
+		},
+		"tooltip": false,
+		"smooth-scrolling-threshold": 0.1,
+		"scroll-step": 5,
+		"on-click": "pavucontrol",
+		"ignored-sinks": [
+			"Easy Effects Sink"
+		]
+	},
 	"bluetooth": {
 		"format": " {status}",
 		"format-disabled": " {status}",
@@ -133,7 +123,6 @@
 		"on-click": "blueman-manager",
 		"format-no-controller": ""
 	},
-	
 	"network": {
 		"format": "{ifname}",
 		"format-wifi": "  {signalStrength}%",
@@ -146,7 +135,6 @@
 		"max-length": 50,
 		"on-click": "nm-connection-editor"
 	},
-	
 	"battery": {
 		"states": {
 			"good": 95,
@@ -156,14 +144,17 @@
 		"format": "{icon} {capacity}%",
 		"format-charging": " {capacity}%",
 		"format-plugged": " {capacity}%",
-		"format-icons": ["", "", "", "", ""]
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		]
 	},
-	
 	"custom/exit": {
 		"format": "",
-		"on-click": "wlogout -b 2",
-		"tooltip": false		
-	},
+		"on-click": "wlogout",
+		"tooltip": false
+	}
 }
-
-

@@ -13,7 +13,6 @@ if [[ $(pidof swaybg) ]]; then
     pkill swaybg
 fi
 
-## Wofi Command
 wofi_command="wofi --show dmenu \
 			--prompt 'choose..'
 			--conf ${CONFIG} --style ${STYLE} --color ${COLORS} \
@@ -47,67 +46,67 @@ main() {
     choice=$(menu | ${wofi_command} | cut -d. -f1)
     case $choice in
     1)
-        swww img ${DIR}/mybackground.jpg --transition-fps 60 --transition-type wave --transition-duration 5
+        swww img ${dir}/mybackground.jpg --transition-fps 60 --transition-type fade --transition-duration 5
         return
         ;;
     2)
-        swww img ${DIR}/Anime-Japan-Street.png --transition-fps 60 --transition-type wave --transition-duration 5
+        swww img ${DIR}/Anime-Japan-Street.png --transition-fps 60 --transition-type fade --transition-duration 5
         return
         ;;
     3)
-        swww img ${DIR}/Dreamy-Aesthetic-Home-Under-Moonlight.png --transition-fps 60 --transition-type wave --transition-duration 5
+        swww img ${DIR}/Dreamy-Aesthetic-Home-Under-Moonlight.png --transition-fps 60 --transition-type fade --transition-duration 5
         return
         ;;
     4)
-        swww img ${DIR}/sky.jpg --transition-fps 60 --transition-type wave --transition-duration 5
+        swww img ${DIR}/sky.jpg --transition-fps 60 --transition-type fade --transition-duration 5
         return
         ;;
     5)
-        swww img ${DIR}/ocean.jpg --transition-fps 60 --transition-type wave --transition-duration 5
+        swww img ${DIR}/ocean.jpg --transition-fps 60 --transition-type fade --transition-duration 5
         return
         ;;
     6)
-        swww img ${DIR}/idk.jpg --transition-fps 60 --transition-type wave --transition-duration 5
+        swww img ${DIR}/idk.jpg --transition-fps 60 --transition-type fade --transition-duration 5
         return
         ;;
     7)
-        swww img ${DIR}/Forest.png --transition-fps 60 --transition-type wave --transition-duration 5
+        swww img ${DIR}/Forest.png --transition-fps 60 --transition-type fade --transition-duration 5
         return
         ;;
     8)
-        swww img ${DIR}/grassland.png --transition-fps 60 --transition-type wave --transition-duration 5
+        swww img ${DIR}/grassland.png --transition-fps 60 --transition-type fade --transition-duration 5
         return
         ;;
     9)
-        swww img ${DIR}/winter_japan.png --transition-fps 60 --transition-type wave --transition-duration 5
+        swww img ${DIR}/winter_japan.png --transition-fps 60 --transition-type fade --transition-duration 5
         return
         ;;
     10)
-        swww img ${DIR}/whale.png --transition-fps 60 --transition-type wave --transition-duration 5
+        swww img ${DIR}/whale.png --transition-fps 60 --transition-type fade --transition-duration 5
         return
         ;;
     11)
-        swww img ${DIR}/canel.png --transition-fps 60 --transition-type wave --transition-duration 5
+        swww img ${DIR}/canel.png --transition-fps 60 --transition-type fade --transition-duration 5
         return
         ;;
     12)
-        swww img ${DIR}/Coast.png --transition-fps 60 --transition-type wave --transition-duration 5
+        swww img ${DIR}/Coast.png --transition-fps 60 --transition-type fade --transition-duration 5
         return
         ;;
 	13)
-		swww img ${DIR}/idk.png --transition-fps 60 --transition-type wave --transition-duration 5
+		swww img ${DIR}/idk.png --transition-fps 60 --transition-type fade --transition-duration 5
 		return
 		;;
 	14)
-		swww img ${DIR}/Haunted.png --transition-fps 60 --transition-type wave --transition-duration 5
+		swww img ${DIR}/Haunted.png --transition-fps 60 --transition-type fade --transition-duration 5
 		return
 		;;
 	15)
-		swww img ${DIR}/ocean.png --transition-fps 60 --transition-type wave --transition-duration 5
+		swww img ${DIR}/ocean.png --transition-fps 60 --transition-type fade --transition-duration 5
 		return
 		;;	
 	16)
-		swww img ${DIR}/reze.png --transition-fps 60 --transition-type wave --transition-duration 5
+		swww img ${DIR}/reze.png --transition-fps 60 --transition-type fade --transition-duration 5
 		return
 		;;
     esac

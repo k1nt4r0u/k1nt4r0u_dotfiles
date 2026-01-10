@@ -6,14 +6,14 @@ set icons true
 set drawbox false
 set hidden true
 set ignorecase true
-set cursorpreviewfmt "\033[7m"
+set cursorpreviewfmt "\033[32m"
 #set previewer ctpv
 #set cleaner ctpvclear
 set previewer /home/kintarou/.config/lf/preview
 set cleaner /home/kintarou/.config/lf/cleaner
 #&ctpv -s $id
 #&ctpvquit $id
-set promptfmt "\033[34;1m%u\033[0m@\033[36;1m%h\033[0m:\033[32;1m%w\033[0m"
+set promptfmt "\033[34;1m%u\033[0m@\033[34;1m%h\033[0m:\033[32;1m%w\033[0m"
 cmd open ${{
     if [ -d "$f" ]; then
         lf -remote "send $id cd \"$f\""
@@ -25,43 +25,43 @@ cmd open ${{
         application/x-executable|application/x-pie-executable|application/x-sharedlib)
             setsid -f /home/kintarou/tools/ida-pro-9.0/ida "$f" >/dev/null 2>&1
             exit 0
-            ;;
+            ;; 
 		*.epub)
             setsid -f foliate "$f" >/dev/null 2>&1
             exit 0
-            ;;
+            ;; 
         *.apk)
-            setsid -f jadx-gui "$f" >/dev/null 2>&1
+            setsid -f jadx "$f" >/dev/null 2>&1
             exit 0
-            ;;
+            ;; 
         image/*)
             setsid -f imv "$f" >/dev/null 2>&1
             exit 0
-            ;;
+            ;; 
         video/*)
             setsid -f mpv "$f" >/dev/null 2>&1
             exit 0
-            ;;
+            ;; 
         application/pdf)
             setsid -f evince "$f" >/dev/null 2>&1
             exit 0
-            ;;
+            ;; 
     esac
 
     is_text=false
     case "$mime" in
         text/*|application/json|application/xml|application/javascript|application/x-shellscript|application/toml|application/x-yaml|inode/x-empty)
-            is_text=true ;;
+            is_text=true ;; 
     esac
 
     if [ "$is_text" = "false" ]; then
         case "$f" in
-            *.jsonc|*.conf|*.ini|*.cfg|*.rasi|*.kdl) is_text=true ;;
+            *.jsonc|*.conf|*.ini|*.cfg|*.rasi|*.kdl) is_text=true ;; 
         esac
     fi
 
     if [ "$is_text" = "true" ]; then
-        nvim "$f"
+		setsid -f footclient -o "main.pad=0x0" nvim "$f" >/dev/null 2>&1
         exit 0
     fi
 

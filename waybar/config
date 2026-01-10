@@ -2,17 +2,17 @@
 	"include": "~/.config/waybar/modules.json",
 	"position": "top",
 	"margin-top": 5,
-	"margin-bottom": 1,
+	"margin-bottom": 0,
 	"layer": "top",
 	"margin-left": 5,
 	"margin-right": 5,    
-	"spacing": 10,
+	"spacing": 3,
 	"fixed-center": true,
 	"exclusive": true,
 	"modules-left": [
         "custom/arch",
-	    "hyprland/workspaces",
-        "mpris"
+	    "niri/workspaces",
+        "custom/playerctl"
         ],
         
         "modules-center": [

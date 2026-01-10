@@ -1,15 +1,16 @@
-@import '../../.cache/wal/colors-waybar.css';
-@define-color ws #6889CE;
+/*@import '../../.cache/wal/colors-waybar.css';*/
+@define-color ws #6889Cd;
 @define-color tt @color1;
 @define-color clock @color3;
 @define-color set @color4;
 @define-color tb rgba(200,200,200,0.2);
 @define-color tbh @color5;
-@define-color text #FFFFFF;
+@define-color text #ffffff; 
+@define-color inactive #ffffff;
 * {
     font-family: "Hurmit Nerd Font";
     border: none;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
 window#waybar {
@@ -19,15 +20,14 @@ window#waybar {
 }
 
 #workspaces {
-    margin: 4px 1px 4px 1px;
-    padding: 0px 0px;
+    margin: 2px 3px;
+    padding: 1px 4px 1px 4px;
     border-radius: 5px;
     border: 0px;
     font-weight: normal;
     font-style: normal;
     font-size: 16px;
     color: @text;
-    opacity: 0.9;
 }
 
 #workspaces button {
@@ -110,7 +110,7 @@ tooltip label {
     margin: 3px;
     padding: 2px;
     font-size: 16px;
-    color: @text;
+    color: @inactive;
 }
 
 #pulseaudio {
@@ -246,33 +246,62 @@ tooltip label {
 }
 
 #custom-arch {
-    background-color: transparent;
-    color: #ffffff;
+    background-color: @ws;
+    color: @text;
     font-size: 20px;
-    padding-top: 1px;
-    padding-bottom: 1px;
-    padding-left: 3px;
-    padding-right: 1px;
-    border-radius: 10px;
+    padding: 1px 15px 1px 11.5px;
+    margin: 3px 3px;
+    border-radius: 5px;
     min-width: 30px;
 }
 
 
 #mpris {
-    padding: 0 10px;
-    margin: 0 5px;
-    border-radius: 8px;
-    background-color: transparent;
-    color: @ws;
-    transition: all 0.3s ease;
+    background-color: @ws;
+    font-size: 14px;
+    color: @text;
+    border-radius: 5px;
+	padding: 1px 10px 0px 10px;
+    margin: 4px 1px;
+    opacity: 0.9;
+    border: none;
 }
 
 #mpris.playing {
-    color: @ws;
-    background-color: transparent;
+    color: @text;
+    background-color: @ws;
 }
 
 #mpris.paused {
-    color: @ws;
-    background-color: transparent;
+    color: @text;
+    background-color: @ws;
+}
+
+#custom-playerctl {
+    background-color: @ws;
+	font-size: 14px;
+    color: @text;
+	padding: 1px 10px 0px 10px;
+    border-radius: 5px;
+	margin: 4px 1px;
+    opacity: 0.9;
+}
+
+#custom-playerctl.Playing {
+    background-color: @ws;
+	color: @text;
+}
+
+#custom-playerctl.Paused {
+    background-color: @ws;
+	color: @text;
+}
+
+#custom-playerctl.Stopped {
+    background-color: @ws;
+	color: @inactive;
+}
+
+#custom-playerctl label {
+	padding-right: 5px;
 }

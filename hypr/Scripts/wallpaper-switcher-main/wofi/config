@@ -1,44 +1,44 @@
-## Wofi Config
+# show=drun
+# prompt=Apps
+# normal_window=true
+# layer=overlay
+# term=foot
+# columns=2
+#
+# width=30%
+# height=30%
+# location=top_left
+# orientation=vertical
+# halign=fill
+# line_wrap=off
+# dynamic_lines=false
+#
+# allow_markup=true
+# allow_images=true
+# image_size=24
+#
+# exec_search=false
+# hide_search=true
+# parse_search=false
+# insensitive=false
+#
+# key_up=k
+# key_down=j
+# key_left=h
+# key_right=l
+#
+# hide_scroll=true
+# no_actions=true
+# sort_order=default
+# gtk_dark=true
+# filter_rate=100
+#
+# key_expand=Tab
+key_exit=Escape
 
-## General
-show=drun
-prompt=Apps
-normal_window=true
-layer=overlay
-term=foot
-columns=2
-
-## Geometry
-width=30%
-height=30%
-location=top_left
-orientation=vertical
-halign=fill
-line_wrap=off
-dynamic_lines=false
-
-## Images
-allow_markup=true
-allow_images=true
-image_size=24
-
-exec_search=false
+print_line=true
 hide_search=true
-parse_search=false
-insensitive=false
-
 key_up=k
 key_down=j
 key_left=h
 key_right=l
-
-## Other
-hide_scroll=true
-no_actions=true
-sort_order=default
-gtk_dark=true
-filter_rate=100
-
-## Keys
-key_expand=Tab
-key_exit=Escape

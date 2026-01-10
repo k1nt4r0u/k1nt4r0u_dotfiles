@@ -1,15 +1,27 @@
 #!/usr/bin/env bash
 
+# image() {
+#     if command -v chafa > /dev/null 2>&1; then
+#         chafa -f symbols \
+#               -s "$2x$3" \
+#               --animate off \
+#               --polite on \
+#               "$1"
+#     else
+#         echo "Cài 'chafa' đi thằng l*n, đéo có sao hiện ảnh?"
+#     fi
+# }
+
+# image() {
+# 	kitten icat --clear --silent --stdin no --transfer-mode file --place "${2}x${3}@${4}x${5}" "$1" < /dev/null > /dev/tty
+# 	exit 1
+# }
+# case "$1" in
+#     "") exit 0 ;;
+# esac
+
 image() {
-    if command -v chafa > /dev/null 2>&1; then
-        chafa -f symbols \
-              -s "$2x$3" \
-              --animate off \
-              --polite on \
-              "$1"
-    else
-        echo "Cài 'chafa' đi thằng l*n, đéo có sao hiện ảnh?"
-    fi
+  chafa -O 5 -w 2 -f sixel -s "$2x$3" -O 0 --animate off --polite on "$1"
 }
 
 batorcat() {
@@ -71,7 +83,14 @@ case "$(printf "%s\n" "$1" | awk '{print tolower($0)}')" in
     *.torrent) transmission-show "$1" ;;
     *.iso) iso-info --no-header -l "$1" ;;
     *.wav|*.mp3|*.flac|*.m4a|*.wma|*.ape|*.ac3|*.og[agx]|*.spx|*.opus|*.as[fx]|*.mka)
-        exiftool "$1"
+        [ ! -f "${CACHE}.jpg" ] && \
+            ffmpeg -i "$1" -an -vcodec copy "${CACHE}.jpg" -y >/dev/null 2>&1
+        
+        if [ -f "${CACHE}.jpg" ]; then
+            image "${CACHE}.jpg" "$2" "$3" "$4" "$5"
+        else
+            exiftool "$1" | batorcat --language=txt
+        fi
         ;;
     *.avi|*.mp4|*.wmv|*.dat|*.3gp|*.ogv|*.mkv|*.mpg|*.mpeg|*.vob|*.fl[icv]|*.m2v|*.mov|*.webm|*.ts|*.mts|*.m4v|*.r[am]|*.qt|*.divx)
         [ ! -f "${CACHE}.jpg" ] && \

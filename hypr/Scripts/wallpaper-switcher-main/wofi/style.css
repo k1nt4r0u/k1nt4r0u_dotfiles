@@ -6,7 +6,7 @@
 #window {
 	background-color: rgba(50, 50, 50, 0.4);
 	color: --wofi-color2;
-	border: 2px solid --wofi-color1;
+	border: 1px solid #7390ea;
 	border-radius: 0px;
 }
 
@@ -21,8 +21,8 @@
 }
 
 #scroll {
-	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-top: 7px;
+	margin-bottom: 7px;
 }
 
 #inner-box {

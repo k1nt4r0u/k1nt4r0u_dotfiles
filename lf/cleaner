@@ -1,7 +1,2 @@
-#!/bin/sh
-
-if command -v chafa > /dev/null 2>&1; then
-    chafa --clear > /dev/null 2>&1
-fi
-
-exit 0
+# #!/usr/bin/env bash
+    clean_foot_sixel

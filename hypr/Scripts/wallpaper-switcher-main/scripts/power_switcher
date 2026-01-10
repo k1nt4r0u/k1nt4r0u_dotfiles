@@ -1,8 +1,8 @@
 #!/bin/bash
 
-CONFIG="$HOME/.config/hypr/Scripts/wallpaper-switcher-main/wofi/config"
-STYLE="$HOME/.config/hypr/Scripts/wallpaper-switcher-main/wofi/style.css"
-COLORS="$HOME/.config/hypr/Scripts/wallpaper-switcher-main/wofi/colors"
+config="$home/.config/hypr/scripts/wallpaper-switcher-main/wofi/config"
+style="$home/.config/hypr/scripts/wallpaper-switcher-main/wofi/style.css"
+colors="$home/.config/hypr/scripts/wallpaper-switcher-main/wofi/colors"
 
 if pgrep -x "wofi" > /dev/null; then
     pkill -x wofi
