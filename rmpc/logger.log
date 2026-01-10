@@ -1,0 +1,1081 @@
+✓ Connected to MPD at localhost:6600
+📊 Logging to: /home/kintarou/.config/rmpc/listening_history.jsonl
+🎵 Monitoring your listening activity...
+
+▶ Now playing: Chuột Sấm Sét - đôi mình
+▶ Now playing: Madihu/Low G - Có Em
+▶ Now playing: Chuột Sấm Sét - đôi mình
+▶ Now playing: SOOBIN, 16 Typh, Hà Lê, Hà Trần, Lil Wuyn, CHARLES., Brown, Duy Sơn, KIMLONG - Tình Cờ (feat. CHARLES., Brown, KIMLONG & Duy Sơn)
+♫ Logged: SOOBIN, 16 Typh, Hà Lê, Hà Trần, Lil Wuyn, CHARLES., Brown, Duy Sơn, KIMLONG - Tình Cờ (feat. CHARLES., Brown, KIMLONG & Duy Sơn) (232s)
+▶ Now playing: Vinh Khuat - Quá Lâu
+Traceback (most recent call last):
+  File "/home/kintarou/.config/rmpc/rmpc-logger.py", line 111, in <module>
+    logger.run()
+    ~~~~~~~~~~^^
+  File "/home/kintarou/.config/rmpc/rmpc-logger.py", line 63, in run
+    status = self.client.status()
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 497, in mpd_command
+    return wrapper(self, name, args, callback)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 559, in _execute
+    return retval()
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 481, in command_callback
+    res = function(self, self._read_lines())
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 389, in _parse_object
+    return next(self._parse_objects(lines))
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 225, in _parse_objects
+    for key, value in self._parse_pairs(lines):
+                      ~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 215, in _parse_pairs
+    for line in lines:
+                ^^^^^
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 615, in _read_lines
+    line = self._read_line()
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 600, in _read_line
+    raise ConnectionError("Connection lost while reading line")
+mpd.base.ConnectionError: Connection lost while reading line
+✓ Connected to MPD at localhost:6600
+📊 Logging to: /home/kintarou/.config/rmpc/listening_history.jsonl
+🎵 Monitoring your listening activity...
+
+▶ Now playing: Anh Quân Idol - E Là Không Thể (Chốn Tìm Show)
+♫ Logged: Anh Quân Idol - E Là Không Thể (Chốn Tìm Show) (254s)
+▶ Now playing: Madihu/Low G - Có Em
+♫ Logged: Madihu/Low G - Có Em (218s)
+▶ Now playing: Hào - Ta Đã Từng Yêu Nhau Chưa
+♫ Logged: Hào - Ta Đã Từng Yêu Nhau Chưa (236s)
+▶ Now playing: No Sleep Session - Con Tim Bốc Cháy
+Traceback (most recent call last):
+  File "/home/kintarou/.config/rmpc/rmpc-logger.py", line 111, in <module>
+    logger.run()
+    ~~~~~~~~~~^^
+  File "/home/kintarou/.config/rmpc/rmpc-logger.py", line 78, in run
+    prev_song = self.client.playlistid(self.current_song)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 497, in mpd_command
+    return wrapper(self, name, args, callback)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 559, in _execute
+    return retval()
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 484, in command_callback
+    res = self._wrap_iterator(res)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 752, in _wrap_iterator
+    return list(iterator)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 225, in _parse_objects
+    for key, value in self._parse_pairs(lines):
+                      ~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 215, in _parse_pairs
+    for line in lines:
+                ^^^^^
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 615, in _read_lines
+    line = self._read_line()
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 604, in _read_line
+    raise CommandError(error)
+mpd.base.CommandError: [50@0] {playlistid} No such song
+✓ Connected to MPD at localhost:6600
+📊 Logging to: /home/kintarou/.config/rmpc/listening_history.jsonl
+🎵 Monitoring your listening activity...
+
+▶ Now playing: Nom Tunes - Daydream
+▶ Now playing: Chuột Sấm Sét - đôi mình
+▶ Now playing: Clow - Vì Sao Em Đi
+♫ Logged: Clow - Vì Sao Em Đi (206s)
+▶ Now playing: Hào - Kính Cận
+♫ Logged: Hào - Kính Cận (230s)
+▶ Now playing: Đặng Vĩnh Thịnh/BMZ/Nguyễn Trung Đức - Ngàn Năm Ánh Sáng
+♫ Logged: Đặng Vĩnh Thịnh/BMZ/Nguyễn Trung Đức - Ngàn Năm Ánh Sáng (214s)
+▶ Now playing: Vũ./Dear Jane - Những Lời Hứa Bỏ Quên
+♫ Logged: Vũ./Dear Jane - Những Lời Hứa Bỏ Quên (236s)
+▶ Now playing: Chuột Sấm Sét - đôi mình
+♫ Logged: Chuột Sấm Sét - đôi mình (178s)
+▶ Now playing: JustaTee - Đã Lỡ Yêu Em Nhiều
+♫ Logged: JustaTee - Đã Lỡ Yêu Em Nhiều (260s)
+▶ Now playing: Mèow Lạc - Tái chế con tim
+♫ Logged: Mèow Lạc - Tái chế con tim (224s)
+▶ Now playing: Sơn Tùng M-TP/Snoop Dogg - Hãy Trao Cho Anh
+▶ Now playing: (S)TRONG/Rhymastic - Kho Báu (with Rhymastic)
+♫ Logged: (S)TRONG/Rhymastic - Kho Báu (with Rhymastic) (216s)
+▶ Now playing: Dấu Vân Tay - Giấc Mơ Của Loài Người
+♫ Logged: Dấu Vân Tay - Giấc Mơ Của Loài Người (262s)
+▶ Now playing: Chillies - Có Em Đời Bỗng Vui
+♫ Logged: Chillies - Có Em Đời Bỗng Vui (248s)
+▶ Now playing: Phương Ly - Little Love (But No Limit)
+♫ Logged: Phương Ly - Little Love (But No Limit) (238s)
+▶ Now playing: Ed Sheeran - Perfect - Acoustic
+♫ Logged: Ed Sheeran - Perfect - Acoustic (260s)
+▶ Now playing: Hoàng Thống - Rơi
+♫ Logged: Hoàng Thống - Rơi (234s)
+▶ Now playing: GREY D/tlinh - vaicaunoicokhiennguoithaydoi
+♫ Logged: GREY D/tlinh - vaicaunoicokhiennguoithaydoi (226s)
+▶ Now playing: Thịnh Suy - Thắc Mắc?
+▶ Now playing: Kiên Trịnh - Nghe Nhạc Anh Mỗi Khi Buồn
+♫ Logged: Kiên Trịnh - Nghe Nhạc Anh Mỗi Khi Buồn (66s)
+▶ Now playing: marzuz/Gill/Onionn. - và thế giới đã mất đi một người cô đơn (feat. Gill & onionn.)
+♫ Logged: marzuz/Gill/Onionn. - và thế giới đã mất đi một người cô đơn (feat. Gill & onionn.) (230s)
+▶ Now playing: SOOBIN/Rhymastic - Sẽ Quên Em Nhanh Thôi (feat. Rhymastic)
+♫ Logged: SOOBIN/Rhymastic - Sẽ Quên Em Nhanh Thôi (feat. Rhymastic) (174s)
+▶ Now playing: Hoàng Thống - Film
+♫ Logged: Hoàng Thống - Film (228s)
+▶ Now playing: Madihu - Không Còn Em
+♫ Logged: Madihu - Không Còn Em (235s)
+▶ Now playing: Đen, Thành Đồng, Vũ. - Anh Đếch Cần Gì Nhiều Ngoài Em (feat. Thành Đồng, Vũ.)
+♫ Logged: Đen, Thành Đồng, Vũ. - Anh Đếch Cần Gì Nhiều Ngoài Em (feat. Thành Đồng, Vũ.) (112s)
+▶ Now playing: Đen, Thành Đồng, Vũ. - Anh Đếch Cần Gì Nhiều Ngoài Em (feat. Thành Đồng, Vũ.)
+▶ Now playing: No Sleep Session - Xoay Một Vòng
+▶ Now playing: Ân ngờ/MYLINA - Vườn mây vừa hay
+▶ Now playing: Sơn Tùng M-TP - Muộn Rồi Mà Sao Còn
+♫ Logged: Sơn Tùng M-TP - Muộn Rồi Mà Sao Còn (276s)
+▶ Now playing: SOOBIN - Nếu Ngày Ấy
+♫ Logged: SOOBIN - Nếu Ngày Ấy (292s)
+▶ Now playing: MONSTAR - giữ lấy làm gì
+♫ Logged: MONSTAR - giữ lấy làm gì (202s)
+▶ Now playing: QUANGHUY - Tự Tình
+♫ Logged: QUANGHUY - Tự Tình (316s)
+▶ Now playing: Khiem - Yên Bình Có Quá Đắt Không
+♫ Logged: Khiem - Yên Bình Có Quá Đắt Không (248s)
+▶ Now playing: potsu - i'm closing my eyes
+♫ Logged: potsu - i'm closing my eyes (120s)
+▶ Now playing: Thịnh Suy - Chuyện Rằng
+♫ Logged: Thịnh Suy - Chuyện Rằng (276s)
+▶ Now playing: YOASOBI - 群青
+♫ Logged: YOASOBI - 群青 (248s)
+▶ Now playing: Thịnh Suy - Nghe Em
+♫ Logged: Thịnh Suy - Nghe Em (270s)
+▶ Now playing: Ngọt - Em Dạo Này
+♫ Logged: Ngọt - Em Dạo Này (98s)
+▶ Now playing: YOASOBI - たぶん
+♫ Logged: YOASOBI - たぶん (258s)
+▶ Now playing: YOASOBI - 優しい彗星
+♫ Logged: YOASOBI - 優しい彗星 (214s)
+▶ Now playing: YOASOBI - ラブレター
+♫ Logged: YOASOBI - ラブレター (210s)
+▶ Now playing: YOASOBI - アンコール
+♫ Logged: YOASOBI - アンコール (272s)
+▶ Now playing: YOASOBI - ハルジオン
+♫ Logged: YOASOBI - ハルジオン (196s)
+▶ Now playing: YOASOBI - 夜に駆ける
+♫ Logged: YOASOBI - 夜に駆ける (262s)
+▶ Now playing: YOASOBI - あの夢をなぞって
+♫ Logged: YOASOBI - あの夢をなぞって (242s)
+▶ Now playing: YOASOBI - 群青
+♫ Logged: YOASOBI - 群青 (248s)
+▶ Now playing: Ikimonogakari - 熱情のスペクトラム
+♫ Logged: Ikimonogakari - 熱情のスペクトラム (236s)
+▶ Now playing: YOASOBI - ハルジオン
+♫ Logged: YOASOBI - ハルジオン (198s)
+▶ Now playing: Ikimonogakari - 熱情のスペクトラム
+▶ Now playing: Anh Phan/Low G/Larria. - Tam Giác
+▶ Now playing: Rocky CDE/Rich Choi/Cậu Phát - NÂNG TẦM CUỘC CHƠI 2.0
+♫ Logged: Rocky CDE/Rich Choi/Cậu Phát - NÂNG TẦM CUỘC CHƠI 2.0 (252s)
+▶ Now playing: Betekar/Yello $osa - Truyền Thuyết Đô Thị
+♫ Logged: Betekar/Yello $osa - Truyền Thuyết Đô Thị (186s)
+▶ Now playing: Low G/Maiki - Simp Gái 808 (Maiki Remix)
+♫ Logged: Low G/Maiki - Simp Gái 808 (Maiki Remix) (206s)
+▶ Now playing: Hustlang Robber - Slatt ON
+♫ Logged: Hustlang Robber - Slatt ON (224s)
+▶ Now playing: Mason Nguyen/24k.Right/Hipz - Hai Thằng Bịp
+♫ Logged: Mason Nguyen/24k.Right/Hipz - Hai Thằng Bịp (178s)
+▶ Now playing: Low G - Càng Cua
+♫ Logged: Low G - Càng Cua (140s)
+▶ Now playing: Xuanpac/Sawpaing - Hoàng Thượng Drill
+♫ Logged: Xuanpac/Sawpaing - Hoàng Thượng Drill (138s)
+▶ Now playing: Low G/Trungng - Dáng Xinh
+♫ Logged: Low G/Trungng - Dáng Xinh (202s)
+▶ Now playing: Obito - Dạo Này
+♫ Logged: Obito - Dạo Này (284s)
+▶ Now playing: Low G - Simp Gái 808
+♫ Logged: Low G - Simp Gái 808 (162s)
+▶ Now playing: Wxrdie/Gill/Lucin3x - CHÊ HỘ
+♫ Logged: Wxrdie/Gill/Lucin3x - CHÊ HỘ (200s)
+▶ Now playing: Low G - Okeokeoke
+♫ Logged: Low G - Okeokeoke (140s)
+▶ Now playing: Low G - Flexin' Trên Circle K 2
+♫ Logged: Low G - Flexin' Trên Circle K 2 (274s)
+▶ Now playing: Betekar/Yello $osa - 4DaOpps
+♫ Logged: Betekar/Yello $osa - 4DaOpps (188s)
+▶ Now playing: Rocky CDE/Cậu Phát - Nâng Tầm Cuộc Chơi
+♫ Logged: Rocky CDE/Cậu Phát - Nâng Tầm Cuộc Chơi (252s)
+▶ Now playing: Low G/ResQ/Chí/Teddie J - Cypher Nhà Làm
+♫ Logged: Low G/ResQ/Chí/Teddie J - Cypher Nhà Làm (128s)
+▶ Now playing: Chillies - Em Đừng Khóc
+♫ Logged: Chillies - Em Đừng Khóc (50s)
+▶ Now playing: Vũ./TRANG - Anh Nhớ Ra (feat. TRANG)
+▶ Now playing: Charlie Puth - Light Switch
+▶ Now playing: Rook1e/softy - trouble in paradise
+▶ Now playing: Vũ Cát Tường - Vết Mưa
+▶ Now playing: Anh Quân Idol - E Là Không Thể (Chốn Tìm Show)
+♫ Logged: Anh Quân Idol - E Là Không Thể (Chốn Tìm Show) (254s)
+▶ Now playing: W/N - id 072019
+♫ Logged: W/N - id 072019 (72s)
+▶ Now playing: YOASOBI - ハルジオン
+▶ Now playing: Lope Dope - Ngọt Nhạt Dịu Dàng
+♫ Logged: Lope Dope - Ngọt Nhạt Dịu Dàng (264s)
+▶ Now playing: Hoàng Thống - Rơi
+♫ Logged: Hoàng Thống - Rơi (234s)
+▶ Now playing: Vũ. - Bước Qua Mùa Cô Đơn
+♫ Logged: Vũ. - Bước Qua Mùa Cô Đơn (238s)
+▶ Now playing: Low G/JustaTee - In Love
+♫ Logged: Low G/JustaTee - In Love (236s)
+▶ Now playing: NA - Quốc Thiên - Chân Tình  | Sáng Tác: Trần Lê Quỳnh
+♫ Logged: NA - Quốc Thiên - Chân Tình  | Sáng Tác: Trần Lê Quỳnh (280s)
+▶ Now playing: NA - Hỏa Ca (Call Me By Fire) | MV Bài hát Chủ đề “Anh Trai Vượt Ngàn Chông Gai 2024”
+▶ Now playing: frederic - Oddloop
+▶ Now playing: Djo - End of Beginning
+♫ Logged: Djo - End of Beginning (162s)
+▶ Now playing: Hoàng Dũng - Ném Câu Yêu Vào Không Trung
+▶ Now playing: Hoàng Dũng - Ném Câu Yêu Vào Không Trung✓ Connected to MPD at localhost:6600
+📊 Logging to: /home/kintarou/.config/rmpc/listening_history.jsonl
+🎵 Monitoring your listening activity...
+
+▶ Now playing: JustaTee/Phương Ly - Thằng Điên
+♫ Logged: JustaTee/Phương Ly - Thằng Điên (80s)
+▶ Now playing: Charlie Puth - Light Switch
+♫ Logged: Charlie Puth - Light Switch (126s)
+▶ Now playing: Cá Hồi Hoang - Không Điều Kiện
+♫ Logged: Cá Hồi Hoang - Không Điều Kiện (186s)
+▶ Now playing: frederic - Oddloop
+♫ Logged: frederic - Oddloop (76s)
+▶ Now playing: Anh Quân Idol - E Là Không Thể (Chốn Tìm Show)
+♫ Logged: Anh Quân Idol - E Là Không Thể (Chốn Tìm Show) (58s)
+▶ Now playing: YOASOBI - あの夢をなぞって
+▶ Now playing: THE ORAL CIGARETTES - CATCH ME
+▶ Now playing: The Cab - Angel With a Shotgun
+▶ Now playing: THE ORAL CIGARETTES - CATCH ME
+▶ Now playing: Kano - 小夜子
+♫ Logged: Kano - 小夜子 (254s)
+▶ Now playing: Ikimonogakari - 熱情のスペクトラム
+♫ Logged: Ikimonogakari - 熱情のスペクトラム (234s)
+▶ Now playing: Kano - 世界で一番近くに居るのに
+♫ Logged: Kano - 世界で一番近くに居るのに (298s)
+▶ Now playing: THE ORAL CIGARETTES - CATCH ME
+♫ Logged: THE ORAL CIGARETTES - CATCH ME (204s)
+▶ Now playing: Hoshimachi Suisei - Stellar Stellar
+♫ Logged: Hoshimachi Suisei - Stellar Stellar (302s)
+▶ Now playing: Eve - ラストダンス
+♫ Logged: Eve - ラストダンス (240s)
+▶ Now playing: SPYAIR - イマジネーション
+♫ Logged: SPYAIR - イマジネーション (186s)
+▶ Now playing: SPYAIR - Trust your anthem
+♫ Logged: SPYAIR - Trust your anthem (124s)
+▶ Now playing: ClariS - ヒトリゴト
+▶ Now playing: ClariS - ヒトリゴト
+▶ Now playing: ClariS - ヒトリゴト
+▶ Now playing: Kenshi Yonezu - Flamingo
+▶ Now playing: ClariS - ヒトリゴト
+▶ Now playing: ClariS - ヒトリゴト
+▶ Now playing: YOASOBI - ハルジオン
+♫ Logged: YOASOBI - ハルジオン (198s)
+▶ Now playing: THE ORAL CIGARETTES - ReI
+♫ Logged: THE ORAL CIGARETTES - ReI (260s)
+▶ Now playing: Kano - 闇色アリス
+♫ Logged: Kano - 闇色アリス (246s)
+▶ Now playing: ヨルシカ - 爆弾魔
+♫ Logged: ヨルシカ - 爆弾魔 (192s)
+▶ Now playing: YOASOBI - アンコール
+♫ Logged: YOASOBI - アンコール (270s)
+▶ Now playing: YOASOBI - 群青
+♫ Logged: YOASOBI - 群青 (188s)
+▶ Now playing: YOASOBI - 群青
+▶ Now playing: No Sleep Session - Con Tim Bốc Cháy
+♫ Logged: No Sleep Session - Con Tim Bốc Cháy (218s)
+▶ Now playing: Mer - Tình Thật Tình Mơ
+♫ Logged: Mer - Tình Thật Tình Mơ (178s)
+▶ Now playing: Chillies - Qua Khung Cửa Sổ
+♫ Logged: Chillies - Qua Khung Cửa Sổ (300s)
+▶ Now playing: Quỳnh Anh - Nếu Phải Yêu Em
+♫ Logged: Quỳnh Anh - Nếu Phải Yêu Em (166s)
+▶ Now playing: SOOBIN/tlinh - Ai Mà Biết Được (feat. tlinh)
+♫ Logged: SOOBIN/tlinh - Ai Mà Biết Được (feat. tlinh) (240s)
+▶ Now playing: Madihu - Không Còn Em
+♫ Logged: Madihu - Không Còn Em (90s)
+▶ Now playing: Kano - ルカルカ☆ナイトフィーバー
+♫ Logged: Kano - ルカルカ☆ナイトフィーバー (230s)
+▶ Now playing: Eve - あの娘シークレット
+♫ Logged: Eve - あの娘シークレット (232s)
+▶ Now playing: THE ORAL CIGARETTES - CATCH ME
+♫ Logged: THE ORAL CIGARETTES - CATCH ME (206s)
+▶ Now playing: YOASOBI - 優しい彗星
+♫ Logged: YOASOBI - 優しい彗星 (124s)
+▶ Now playing: YOASOBI - 群青
+▶ Now playing: (S)TRONG/Rhymastic - Kho Báu (with Rhymastic)
+▶ Now playing: (S)TRONG/Rhymastic - Kho Báu (with Rhymastic)
+▶ Now playing: Clow - Sợ Rơi Vào Tình Yêu
+♫ Logged: Clow - Sợ Rơi Vào Tình Yêu (190s)
+▶ Now playing: frederic - Oddloop
+♫ Logged: frederic - Oddloop (72s)
+▶ Now playing: YOASOBI - アンコール
+▶ Now playing: SOOBIN - Đi Để Trở Về
+♫ Logged: SOOBIN - Đi Để Trở Về (58s)
+▶ Now playing: Obito - Dạo Này
+♫ Logged: Obito - Dạo Này (284s)
+▶ Now playing: No Sleep Session - My Forever
+♫ Logged: No Sleep Session - My Forever (208s)
+▶ Now playing: Chillies - Có Em Đời Bỗng Vui
+♫ Logged: Chillies - Có Em Đời Bỗng Vui (248s)
+▶ Now playing: Vũ Cát Tường - Mơ
+♫ Logged: Vũ Cát Tường - Mơ (262s)
+▶ Now playing: Charlie Puth - Light Switch
+♫ Logged: Charlie Puth - Light Switch (184s)
+▶ Now playing: d4vd - Feel It (From “Invincible”)
+♫ Logged: d4vd - Feel It (From “Invincible”) (162s)
+▶ Now playing: YOASOBI - ラブレター
+♫ Logged: YOASOBI - ラブレター (210s)
+▶ Now playing: Hứa Kim Tuyền/Orange - dưới ánh đèn sân khấu (feat. Orange)
+♫ Logged: Hứa Kim Tuyền/Orange - dưới ánh đèn sân khấu (feat. Orange) (242s)
+▶ Now playing: Uyên Linh - Giữa Đại Lộ Đông Tây
+♫ Logged: Uyên Linh - Giữa Đại Lộ Đông Tây (228s)
+▶ Now playing: The Macarons Project - Fly Me to the Moon
+♫ Logged: The Macarons Project - Fly Me to the Moon (154s)
+▶ Now playing: Văn Mai Hương/Hứa Kim Tuyền - Một Ngàn Nỗi Đau
+♫ Logged: Văn Mai Hương/Hứa Kim Tuyền - Một Ngàn Nỗi Đau (322s)
+▶ Now playing: Lope Dope - Đêm Thành Phố
+♫ Logged: Lope Dope - Đêm Thành Phố (244s)
+▶ Now playing: Mer/Kriss Ngo - tâm
+▶ Now playing: Mer/Kriss Ngo - tâm
+▶ Now playing: Mer/Kriss Ngo - tâm
+▶ Now playing: Joji - Die For You
+♫ Logged: Joji - Die For You (166s)
+▶ Now playing: Chillies - Đại Lộ Mặt Trời
+▶ Now playing: Chillies - Đại Lộ Mặt Trời
+▶ Now playing: Chillies - Đại Lộ Mặt Trời
+▶ Now playing: Chillies - Đại Lộ Mặt Trời
+▶ Now playing: Chillies - Đại Lộ Mặt Trời
+▶ Now playing: Chillies - Đại Lộ Mặt Trời
+▶ Now playing: Chillies - Đại Lộ Mặt Trời
+▶ Now playing: Chillies - Đại Lộ Mặt Trời
+▶ Now playing: Chillies - Đại Lộ Mặt Trời
+▶ Now playing: Chillies - Đại Lộ Mặt Trời
+▶ Now playing: Chillies - Đại Lộ Mặt Trời
+▶ Now playing: Chillies - Đại Lộ Mặt Trời
+▶ Now playing: Chillies - Đại Lộ Mặt Trời
+▶ Now playing: Chillies - Đại Lộ Mặt Trời
+▶ Now playing: Chillies - Đại Lộ Mặt Trời
+▶ Now playing: Chillies - Đại Lộ Mặt Trời
+▶ Now playing: Chillies - Đại Lộ Mặt Trời
+▶ Now playing: Chillies - Đại Lộ Mặt Trời
+▶ Now playing: Hoàng Dũng - Ném Câu Yêu Vào Không Trung
+▶ Now playing: Hoàng Dũng - Ném Câu Yêu Vào Không Trung
+▶ Now playing: Nom Tunes - Sunset View
+▶ Now playing: Nom Tunes - Sunset View
+♫ Logged: Nom Tunes - Sunset View (128s)
+▶ Now playing: Nom Tunes - Peaceful Night
+♫ Logged: Nom Tunes - Peaceful Night (294s)
+▶ Now playing: Nom Tunes - Night Walk
+♫ Logged: Nom Tunes - Night Walk (94s)
+▶ Now playing: Nom Tunes - Why is the Sky so Blue?
+♫ Logged: Nom Tunes - Why is the Sky so Blue? (158s)
+▶ Now playing: Nom Tunes - Evening Breeze
+♫ Logged: Nom Tunes - Evening Breeze (182s)
+▶ Now playing: Nom Tunes - Daydream
+♫ Logged: Nom Tunes - Daydream (192s)
+▶ Now playing: softy - interlude
+Traceback (most recent call last):
+  File "/home/kintarou/.config/rmpc/rmpc-logger.py", line 111, in <module>
+    logger.run()
+    ~~~~~~~~~~^^
+  File "/home/kintarou/.config/rmpc/rmpc-logger.py", line 78, in run
+    prev_song = self.client.playlistid(self.current_song)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 497, in mpd_command
+    return wrapper(self, name, args, callback)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 559, in _execute
+    return retval()
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 484, in command_callback
+    res = self._wrap_iterator(res)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 752, in _wrap_iterator
+    return list(iterator)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 225, in _parse_objects
+    for key, value in self._parse_pairs(lines):
+                      ~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 215, in _parse_pairs
+    for line in lines:
+                ^^^^^
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 615, in _read_lines
+    line = self._read_line()
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 604, in _read_line
+    raise CommandError(error)
+mpd.base.CommandError: [50@0] {playlistid} No such song
+✓ Connected to MPD at localhost:6600
+📊 Logging to: /home/kintarou/.config/rmpc/listening_history.jsonl
+🎵 Monitoring your listening activity...
+
+▶ Now playing: Wxrdie/Gill/Lucin3x - CHÊ HỘ
+Traceback (most recent call last):
+  File "/home/kintarou/.config/rmpc/rmpc-logger.py", line 111, in <module>
+    logger.run()
+    ~~~~~~~~~~^^
+  File "/home/kintarou/.config/rmpc/rmpc-logger.py", line 78, in run
+    prev_song = self.client.playlistid(self.current_song)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 497, in mpd_command
+    return wrapper(self, name, args, callback)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 559, in _execute
+    return retval()
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 484, in command_callback
+    res = self._wrap_iterator(res)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 752, in _wrap_iterator
+    return list(iterator)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 225, in _parse_objects
+    for key, value in self._parse_pairs(lines):
+                      ~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 215, in _parse_pairs
+    for line in lines:
+                ^^^^^
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 615, in _read_lines
+    line = self._read_line()
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 604, in _read_line
+    raise CommandError(error)
+mpd.base.CommandError: [50@0] {playlistid} No such song
+✓ Connected to MPD at localhost:6600
+📊 Logging to: /home/kintarou/.config/rmpc/listening_history.jsonl
+🎵 Monitoring your listening activity...
+
+▶ Now playing: Clow - Sợ Rơi Vào Tình Yêu
+▶ Now playing: Nom Tunes - Beautiful Solitude
+♫ Logged: Nom Tunes - Beautiful Solitude (116s)
+▶ Now playing: Nom Tunes - I Love the Rain
+♫ Logged: Nom Tunes - I Love the Rain (178s)
+▶ Now playing: Mer/Kriss Ngo - another chance?
+♫ Logged: Mer/Kriss Ngo - another chance? (198s)
+▶ Now playing: Nom Tunes - Missing Piece
+♫ Logged: Nom Tunes - Missing Piece (120s)
+▶ Now playing: Nom Tunes - Peaceful Night
+♫ Logged: Nom Tunes - Peaceful Night (292s)
+▶ Now playing: Nom Tunes - Sunset View
+▶ Now playing: ヨルシカ - 爆弾魔
+♫ Logged: ヨルシカ - 爆弾魔 (218s)
+▶ Now playing: SPYAIR - イマジネーション
+♫ Logged: SPYAIR - イマジネーション (186s)
+▶ Now playing: Kenshi Yonezu - Flamingo
+♫ Logged: Kenshi Yonezu - Flamingo (196s)
+▶ Now playing: Eve - Kaikai Kitan
+Traceback (most recent call last):
+  File "/home/kintarou/.config/rmpc/rmpc-logger.py", line 111, in <module>
+    logger.run()
+    ~~~~~~~~~~^^
+  File "/home/kintarou/.config/rmpc/rmpc-logger.py", line 78, in run
+    prev_song = self.client.playlistid(self.current_song)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 497, in mpd_command
+    return wrapper(self, name, args, callback)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 559, in _execute
+    return retval()
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 484, in command_callback
+    res = self._wrap_iterator(res)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 752, in _wrap_iterator
+    return list(iterator)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 225, in _parse_objects
+    for key, value in self._parse_pairs(lines):
+                      ~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 215, in _parse_pairs
+    for line in lines:
+                ^^^^^
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 615, in _read_lines
+    line = self._read_line()
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 604, in _read_line
+    raise CommandError(error)
+mpd.base.CommandError: [50@0] {playlistid} No such song
+✓ Connected to MPD at localhost:6600
+📊 Logging to: /home/kintarou/.config/rmpc/listening_history.jsonl
+🎵 Monitoring your listening activity...
+
+▶ Now playing: NA - thap trap tu do (remix) - lý lữ ca prod. tyronee
+♫ Logged: NA - thap trap tu do (remix) - lý lữ ca prod. tyronee (138s)
+▶ Now playing: NA - MẸ YÊU CON - Nhà TINH HOA (Tiết Mục Nhóm) CHUNG KẾT | ANH TRAI VƯỢT NGÀN CHÔNG GAI 2024
+▶ Now playing: SOOBIN/Tiến Luật/Tuấn Hưng/Quốc Thiên/Rhymastic/Tự Long - Những Kẻ Mộng Mơ
+Traceback (most recent call last):
+  File "/home/kintarou/.config/rmpc/rmpc-logger.py", line 111, in <module>
+    logger.run()
+    ~~~~~~~~~~^^
+  File "/home/kintarou/.config/rmpc/rmpc-logger.py", line 78, in run
+    prev_song = self.client.playlistid(self.current_song)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 497, in mpd_command
+    return wrapper(self, name, args, callback)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 559, in _execute
+    return retval()
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 484, in command_callback
+    res = self._wrap_iterator(res)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 752, in _wrap_iterator
+    return list(iterator)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 225, in _parse_objects
+    for key, value in self._parse_pairs(lines):
+                      ~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 215, in _parse_pairs
+    for line in lines:
+                ^^^^^
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 615, in _read_lines
+    line = self._read_line()
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 604, in _read_line
+    raise CommandError(error)
+mpd.base.CommandError: [50@0] {playlistid} No such song
+✓ Connected to MPD at localhost:6600
+📊 Logging to: /home/kintarou/.config/rmpc/listening_history.jsonl
+🎵 Monitoring your listening activity...
+
+▶ Now playing: Cường Seven/Phan Đinh Tùng/Bằng Kiều/Jun Phạm/Tự Long/Trương Thế Vinh/Tuấn Hưng/SOOBIN/S.T Sơn Thạch/Kay Trần/BB Trần/(S)TRONG/Kiên Ứng - NÉT
+Traceback (most recent call last):
+  File "/home/kintarou/.config/rmpc/rmpc-logger.py", line 111, in <module>
+    logger.run()
+    ~~~~~~~~~~^^
+  File "/home/kintarou/.config/rmpc/rmpc-logger.py", line 78, in run
+    prev_song = self.client.playlistid(self.current_song)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 497, in mpd_command
+    return wrapper(self, name, args, callback)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 559, in _execute
+    return retval()
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 484, in command_callback
+    res = self._wrap_iterator(res)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 752, in _wrap_iterator
+    return list(iterator)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 225, in _parse_objects
+    for key, value in self._parse_pairs(lines):
+                      ~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 215, in _parse_pairs
+    for line in lines:
+                ^^^^^
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 615, in _read_lines
+    line = self._read_line()
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 604, in _read_line
+    raise CommandError(error)
+mpd.base.CommandError: [50@0] {playlistid} No such song
+✓ Connected to MPD at localhost:6600
+📊 Logging to: /home/kintarou/.config/rmpc/listening_history.jsonl
+🎵 Monitoring your listening activity...
+
+▶ Now playing: MAYDAYs/Minh Tốc & Lam - Phép Màu - Đàn Cá Gỗ Original Soundtrack
+♫ Logged: MAYDAYs/Minh Tốc & Lam - Phép Màu - Đàn Cá Gỗ Original Soundtrack (266s)
+▶ Now playing: Hào - Cỏ may
+♫ Logged: Hào - Cỏ may (58s)
+▶ Now playing: Tùng - Giấc Mơ
+▶ Now playing: Quốc Thiên/Hà Lê/Binz/Đinh Tiến Đạt/Duy Khánh 周周 - Trái Đất Ôm Mặt Trời
+♫ Logged: Quốc Thiên/Hà Lê/Binz/Đinh Tiến Đạt/Duy Khánh 周周 - Trái Đất Ôm Mặt Trời (238s)
+▶ Now playing: Jun Phạm/Bùi Công Nam/Rhymastic/Duy Khánh 周周/Ngọc Thanh Tâm - Những Ngày Trời Bao La
+♫ Logged: Jun Phạm/Bùi Công Nam/Rhymastic/Duy Khánh 周周/Ngọc Thanh Tâm - Những Ngày Trời Bao La (132s)
+▶ Now playing: Jun Phạm/Bùi Công Nam/Rhymastic/Duy Khánh 周周/Ngọc Thanh Tâm - Những Ngày Trời Bao La
+♫ Logged: Jun Phạm/Bùi Công Nam/Rhymastic/Duy Khánh 周周/Ngọc Thanh Tâm - Những Ngày Trời Bao La (104s)
+▶ Now playing: Tiến Luật - Tình Em Là Đại Dương
+♫ Logged: Tiến Luật - Tình Em Là Đại Dương (138s)
+▶ Now playing: SOOBIN - Nếu Ngày Ấy
+♫ Logged: SOOBIN - Nếu Ngày Ấy (154s)
+▶ Now playing: SOOBIN - Nếu Ngày Ấy
+♫ Logged: SOOBIN - Nếu Ngày Ấy (136s)
+▶ Now playing: SOOBIN/tlinh - Ai Mà Biết Được (feat. tlinh)
+♫ Logged: SOOBIN/tlinh - Ai Mà Biết Được (feat. tlinh) (240s)
+▶ Now playing: Đen/JustaTee - Đi Về Nhà
+♫ Logged: Đen/JustaTee - Đi Về Nhà (200s)
+▶ Now playing: SOOBIN - DANCING IN THE DARK
+♫ Logged: SOOBIN - DANCING IN THE DARK (228s)
+▶ Now playing: SOOBIN/Tiến Luật/Tuấn Hưng/Quốc Thiên/Rhymastic/Tự Long - Những Kẻ Mộng Mơ
+♫ Logged: SOOBIN/Tiến Luật/Tuấn Hưng/Quốc Thiên/Rhymastic/Tự Long - Những Kẻ Mộng Mơ (292s)
+▶ Now playing: Cường Seven/SOOBIN/Tự Long - Trống Cơm
+♫ Logged: Cường Seven/SOOBIN/Tự Long - Trống Cơm (254s)
+▶ Now playing: SOOBIN - Đi Để Trở Về
+♫ Logged: SOOBIN - Đi Để Trở Về (202s)
+▶ Now playing: Bằng Kiều/Binz/Bùi Công Nam/Duy Khánh 周周/Thanh Duy/Thien Minh - Dẫu Có Lỗi Lầm
+♫ Logged: Bằng Kiều/Binz/Bùi Công Nam/Duy Khánh 周周/Thanh Duy/Thien Minh - Dẫu Có Lỗi Lầm (62s)
+▶ Now playing: Cường Seven/SOOBIN/Tự Long - Trống Cơm
+▶ Now playing: SOOBIN - DANCING IN THE DARK
+▶ Now playing: SOOBIN/Tiến Luật/Tuấn Hưng/Quốc Thiên/Rhymastic/Tự Long - Những Kẻ Mộng Mơ
+♫ Logged: SOOBIN/Tiến Luật/Tuấn Hưng/Quốc Thiên/Rhymastic/Tự Long - Những Kẻ Mộng Mơ (184s)
+▶ Now playing: SOOBIN/Tiến Luật/Tuấn Hưng/Quốc Thiên/Rhymastic/Tự Long - Những Kẻ Mộng Mơ
+♫ Logged: SOOBIN/Tiến Luật/Tuấn Hưng/Quốc Thiên/Rhymastic/Tự Long - Những Kẻ Mộng Mơ (108s)
+▶ Now playing: Cường Seven/SOOBIN/Tự Long - Trống Cơm
+♫ Logged: Cường Seven/SOOBIN/Tự Long - Trống Cơm (254s)
+▶ Now playing: SOOBIN - Đi Để Trở Về
+♫ Logged: SOOBIN - Đi Để Trở Về (202s)
+▶ Now playing: Bằng Kiều/Binz/Bùi Công Nam/Duy Khánh 周周/Thanh Duy/Thien Minh - Dẫu Có Lỗi Lầm
+♫ Logged: Bằng Kiều/Binz/Bùi Công Nam/Duy Khánh 周周/Thanh Duy/Thien Minh - Dẫu Có Lỗi Lầm (314s)
+▶ Now playing: SOOBIN - Anh Đã Quen Với Cô Đơn
+♫ Logged: SOOBIN - Anh Đã Quen Với Cô Đơn (268s)
+▶ Now playing: (S)TRONG/Rhymastic - Kho Báu (with Rhymastic)
+♫ Logged: (S)TRONG/Rhymastic - Kho Báu (with Rhymastic) (218s)
+▶ Now playing: SOOBIN - Sẽ Quên Em Nhanh Thôi
+♫ Logged: SOOBIN - Sẽ Quên Em Nhanh Thôi (176s)
+▶ Now playing: Cường Seven/SOOBIN/Tự Long/Tuấn Hưng/Jun Phạm/Thanh Duy/(S)TRONG/Đăng Khôi/Đinh Nhật Minh Flute - Chiếc Khăn Piêu
+♫ Logged: Cường Seven/SOOBIN/Tự Long/Tuấn Hưng/Jun Phạm/Thanh Duy/(S)TRONG/Đăng Khôi/Đinh Nhật Minh Flute - Chiếc Khăn Piêu (306s)
+▶ Now playing: SOOBIN/Rhymastic - Sẽ Quên Em Nhanh Thôi (feat. Rhymastic)
+♫ Logged: SOOBIN/Rhymastic - Sẽ Quên Em Nhanh Thôi (feat. Rhymastic) (174s)
+▶ Now playing: Rhymastic - Lặng
+♫ Logged: Rhymastic - Lặng (140s)
+▶ Now playing: Cường Seven/Phan Đinh Tùng/Bằng Kiều/Jun Phạm/Tự Long/Trương Thế Vinh/Tuấn Hưng/SOOBIN/S.T Sơn Thạch/Kay Trần/BB Trần/(S)TRONG/Kiên Ứng - NÉT
+▶ Now playing: No Sleep Session - Con Tim Bốc Cháy
+♫ Logged: No Sleep Session - Con Tim Bốc Cháy (218s)
+▶ Now playing: Lope Dope - Vô Vị
+♫ Logged: Lope Dope - Vô Vị (250s)
+▶ Now playing: Chillies - Đại Lộ Mặt Trời
+♫ Logged: Chillies - Đại Lộ Mặt Trời (272s)
+▶ Now playing: Vũ. - Lạ Lùng
+♫ Logged: Vũ. - Lạ Lùng (262s)
+▶ Now playing: JustaTee/Phương Ly - Thằng Điên
+♫ Logged: JustaTee/Phương Ly - Thằng Điên (234s)
+▶ Now playing: No Sleep Session - Xoay Một Vòng
+♫ Logged: No Sleep Session - Xoay Một Vòng (152s)
+▶ Now playing: Low G - Love Game
+♫ Logged: Low G - Love Game (112s)
+▶ Now playing: Thịnh Suy - tiny love
+▶ Now playing: Low G - Love Game
+▶ Now playing: Thịnh Suy - tiny love
+▶ Now playing: Low G - Love Game
+▶ Now playing: Thịnh Suy - tiny love
+▶ Now playing: Low G - Love Game
+▶ Now playing: Thịnh Suy - tiny love
+▶ Now playing: Low G - Love Game
+♫ Logged: Low G - Love Game (202s)
+▶ Now playing: SOOBIN - Anh Đã Quen Với Cô Đơn
+♫ Logged: SOOBIN - Anh Đã Quen Với Cô Đơn (266s)
+▶ Now playing: SOOBIN/Tiến Luật/Tuấn Hưng/Quốc Thiên/Rhymastic/Tự Long - Những Kẻ Mộng Mơ
+♫ Logged: SOOBIN/Tiến Luật/Tuấn Hưng/Quốc Thiên/Rhymastic/Tự Long - Những Kẻ Mộng Mơ (82s)
+▶ Now playing: SOOBIN, Rhymastic - Sẽ Quên Em Nhanh Thôi (feat. Rhymastic)
+♫ Logged: SOOBIN, Rhymastic - Sẽ Quên Em Nhanh Thôi (feat. Rhymastic) (304s)
+▶ Now playing: Djo - End Of Beginning
+♫ Logged: Djo - End Of Beginning (210s)
+▶ Now playing: Betekar/Yello $osa - Truyền Thuyết Đô Thị
+♫ Logged: Betekar/Yello $osa - Truyền Thuyết Đô Thị (190s)
+▶ Now playing: Cường Seven/SOOBIN/Tự Long/Tuấn Hưng/Jun Phạm/Thanh Duy/(S)TRONG/Đăng Khôi/Đinh Nhật Minh Flute - Chiếc Khăn Piêu
+▶ Now playing: SOOBIN - Anh Đã Quen Với Cô Đơn
+▶ Now playing: SOOBIN/tlinh - Ai Mà Biết Được (feat. tlinh)
+▶ Now playing: Bằng Kiều/Binz/Bùi Công Nam/Duy Khánh 周周/Thanh Duy/Thien Minh - Dẫu Có Lỗi Lầm
+♫ Logged: Bằng Kiều/Binz/Bùi Công Nam/Duy Khánh 周周/Thanh Duy/Thien Minh - Dẫu Có Lỗi Lầm (312s)
+▶ Now playing: Rhymastic - Lặng
+♫ Logged: Rhymastic - Lặng (140s)
+▶ Now playing: Tiến Luật - Tình Em Là Đại Dương
+♫ Logged: Tiến Luật - Tình Em Là Đại Dương (136s)
+▶ Now playing: Jun Phạm/Bùi Công Nam/Rhymastic/Duy Khánh 周周/Ngọc Thanh Tâm - Những Ngày Trời Bao La
+♫ Logged: Jun Phạm/Bùi Công Nam/Rhymastic/Duy Khánh 周周/Ngọc Thanh Tâm - Những Ngày Trời Bao La (238s)
+▶ Now playing: SOOBIN - giá như
+▶ Now playing: SOOBIN - Sẽ Quên Em Nhanh Thôi
+♫ Logged: SOOBIN - Sẽ Quên Em Nhanh Thôi (174s)
+▶ Now playing: Cường Seven/Phan Đinh Tùng/Bằng Kiều/Jun Phạm/Tự Long/Trương Thế Vinh/Tuấn Hưng/SOOBIN/S.T Sơn Thạch/Kay Trần/BB Trần/(S)TRONG/Kiên Ứng - NÉT
+♫ Logged: Cường Seven/Phan Đinh Tùng/Bằng Kiều/Jun Phạm/Tự Long/Trương Thế Vinh/Tuấn Hưng/SOOBIN/S.T Sơn Thạch/Kay Trần/BB Trần/(S)TRONG/Kiên Ứng - NÉT (154s)
+▶ Now playing: Cường Seven/Phan Đinh Tùng/Bằng Kiều/Jun Phạm/Tự Long/Trương Thế Vinh/Tuấn Hưng/SOOBIN/S.T Sơn Thạch/Kay Trần/BB Trần/(S)TRONG/Kiên Ứng - NÉT
+♫ Logged: Cường Seven/Phan Đinh Tùng/Bằng Kiều/Jun Phạm/Tự Long/Trương Thế Vinh/Tuấn Hưng/SOOBIN/S.T Sơn Thạch/Kay Trần/BB Trần/(S)TRONG/Kiên Ứng - NÉT (54s)
+▶ Now playing: Quốc Thiên/Hà Lê/Binz/Đinh Tiến Đạt/Duy Khánh 周周 - Trái Đất Ôm Mặt Trời
+♫ Logged: Quốc Thiên/Hà Lê/Binz/Đinh Tiến Đạt/Duy Khánh 周周 - Trái Đất Ôm Mặt Trời (240s)
+▶ Now playing: SOOBIN - Nếu Ngày Ấy
+♫ Logged: SOOBIN - Nếu Ngày Ấy (292s)
+▶ Now playing: Cường Seven/SOOBIN/Tự Long - Trống Cơm
+♫ Logged: Cường Seven/SOOBIN/Tự Long - Trống Cơm (254s)
+▶ Now playing: Cường Seven/Phan Đinh Tùng/Bằng Kiều/Jun Phạm/Tự Long/Trương Thế Vinh/Tuấn Hưng/SOOBIN/S.T Sơn Thạch/Kay Trần/BB Trần/(S)TRONG/Kiên Ứng - NÉT
+♫ Logged: Cường Seven/Phan Đinh Tùng/Bằng Kiều/Jun Phạm/Tự Long/Trương Thế Vinh/Tuấn Hưng/SOOBIN/S.T Sơn Thạch/Kay Trần/BB Trần/(S)TRONG/Kiên Ứng - NÉT (212s)
+▶ Now playing: SOOBIN/tlinh - Ai Mà Biết Được (feat. tlinh)
+♫ Logged: SOOBIN/tlinh - Ai Mà Biết Được (feat. tlinh) (240s)
+▶ Now playing: Jun Phạm/Bùi Công Nam/Rhymastic/Duy Khánh 周周/Ngọc Thanh Tâm - Những Ngày Trời Bao La
+♫ Logged: Jun Phạm/Bùi Công Nam/Rhymastic/Duy Khánh 周周/Ngọc Thanh Tâm - Những Ngày Trời Bao La (238s)
+▶ Now playing: SOOBIN - Anh Đã Quen Với Cô Đơn
+♫ Logged: SOOBIN - Anh Đã Quen Với Cô Đơn (268s)
+▶ Now playing: SOOBIN - Sẽ Quên Em Nhanh Thôi
+♫ Logged: SOOBIN - Sẽ Quên Em Nhanh Thôi (176s)
+▶ Now playing: Tiến Luật - Tình Em Là Đại Dương
+♫ Logged: Tiến Luật - Tình Em Là Đại Dương (112s)
+▶ Now playing: Tiến Luật - Tình Em Là Đại Dương
+▶ Now playing: Quốc Thiên/Hà Lê/Binz/Đinh Tiến Đạt/Duy Khánh 周周 - Trái Đất Ôm Mặt Trời
+♫ Logged: Quốc Thiên/Hà Lê/Binz/Đinh Tiến Đạt/Duy Khánh 周周 - Trái Đất Ôm Mặt Trời (238s)
+▶ Now playing: Cường Seven/SOOBIN/Tự Long - Trống Cơm
+♫ Logged: Cường Seven/SOOBIN/Tự Long - Trống Cơm (254s)
+▶ Now playing: Bằng Kiều/Binz/Bùi Công Nam/Duy Khánh 周周/Thanh Duy/Thien Minh - Dẫu Có Lỗi Lầm
+▶ Now playing: Dấu Vân Tay - Những Thành Phố Mơ Màng
+♫ Logged: Dấu Vân Tay - Những Thành Phố Mơ Màng (254s)
+▶ Now playing: Tùng - Giấc Mơ
+♫ Logged: Tùng - Giấc Mơ (254s)
+▶ Now playing: Kuun Đức Nam/Linh Thộn - Tình cờ yêu em
+♫ Logged: Kuun Đức Nam/Linh Thộn - Tình cờ yêu em (258s)
+▶ Now playing: Hào - 23:40
+♫ Logged: Hào - 23:40 (224s)
+▶ Now playing: Da LAB/Tóc Tiên - Nước Mắt Em Lau Bằng Tình Yêu Mới
+♫ Logged: Da LAB/Tóc Tiên - Nước Mắt Em Lau Bằng Tình Yêu Mới (286s)
+▶ Now playing: Vũ. - Đông Kiếm Em
+♫ Logged: Vũ. - Đông Kiếm Em (246s)
+▶ Now playing: Phương Ly - Missing You
+♫ Logged: Phương Ly - Missing You (242s)
+▶ Now playing: Phương Ly - ThichThich
+♫ Logged: Phương Ly - ThichThich (242s)
+▶ Now playing: Vũ. - Bước Qua Nhau
+♫ Logged: Vũ. - Bước Qua Nhau (258s)
+▶ Now playing: Mer/Kriss Ngo - nhắm chặt mắt lại hít thật sâu
+♫ Logged: Mer/Kriss Ngo - nhắm chặt mắt lại hít thật sâu (164s)
+▶ Now playing: Uyên Linh - Giữa Đại Lộ Đông Tây
+♫ Logged: Uyên Linh - Giữa Đại Lộ Đông Tây (226s)
+▶ Now playing: Lope Dope - Fuu Và Biển
+♫ Logged: Lope Dope - Fuu Và Biển (290s)
+▶ Now playing: Mèow Lạc - Tái chế con tim
+♫ Logged: Mèow Lạc - Tái chế con tim (224s)
+▶ Now playing: Mer/Kriss Ngo - last day on earth
+♫ Logged: Mer/Kriss Ngo - last day on earth (130s)
+▶ Now playing: THE ORAL CIGARETTES - CATCH ME
+▶ Now playing: Ngọt/Đen - Cho Tôi Lang Thang
+♫ Logged: Ngọt/Đen - Cho Tôi Lang Thang (96s)
+▶ Now playing: Hà Anh Tuấn - Tháng Tư Là Lời Nói Dối Của Em
+♫ Logged: Hà Anh Tuấn - Tháng Tư Là Lời Nói Dối Của Em (32s)
+▶ Now playing: Low G - Flexin' Trên Circle K 2
+♫ Logged: Low G - Flexin' Trên Circle K 2 (74s)
+▶ Now playing: Thắng - Trước Khi Em Tồn Tại
+♫ Logged: Thắng - Trước Khi Em Tồn Tại (88s)
+▶ Now playing: YOASOBI - 夜に駆ける
+▶ Now playing: YOASOBI - ハルジオン
+▶ Now playing: YOASOBI - あの夢をなぞって
+▶ Now playing: YOASOBI - ラブレター
+▶ Now playing: YOASOBI - アンコール
+▶ Now playing: YOASOBI - たぶん
+▶ Now playing: YOASOBI - 群青
+♫ Logged: YOASOBI - 群青 (68s)
+▶ Now playing: YOASOBI - 群青
+▶ Now playing: YOASOBI - たぶん
+Traceback (most recent call last):
+  File "/home/kintarou/.config/rmpc/rmpc-logger.py", line 111, in <module>
+    logger.run()
+    ~~~~~~~~~~^^
+  File "/home/kintarou/.config/rmpc/rmpc-logger.py", line 78, in run
+    prev_song = self.client.playlistid(self.current_song)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 497, in mpd_command
+    return wrapper(self, name, args, callback)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 559, in _execute
+    return retval()
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 484, in command_callback
+    res = self._wrap_iterator(res)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 752, in _wrap_iterator
+    return list(iterator)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 225, in _parse_objects
+    for key, value in self._parse_pairs(lines):
+                      ~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 215, in _parse_pairs
+    for line in lines:
+                ^^^^^
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 615, in _read_lines
+    line = self._read_line()
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 604, in _read_line
+    raise CommandError(error)
+mpd.base.CommandError: [50@0] {playlistid} No such song
+✓ Connected to MPD at localhost:6600
+📊 Logging to: /home/kintarou/.config/rmpc/listening_history.jsonl
+🎵 Monitoring your listening activity...
+
+▶ Now playing: Vinh Khuat - Quá Lâu
+♫ Logged: Vinh Khuat - Quá Lâu (125s)
+▶ Now playing: Dấu Vân Tay - Những Thành Phố Mơ Màng
+♫ Logged: Dấu Vân Tay - Những Thành Phố Mơ Màng (256s)
+▶ Now playing: Mer/Kriss Ngo - nhắm chặt mắt lại hít thật sâu
+♫ Logged: Mer/Kriss Ngo - nhắm chặt mắt lại hít thật sâu (164s)
+▶ Now playing: Lope Dope - Ngọt Nhạt Dịu Dàng
+♫ Logged: Lope Dope - Ngọt Nhạt Dịu Dàng (264s)
+▶ Now playing: Hào - Kính Cận
+♫ Logged: Hào - Kính Cận (230s)
+▶ Now playing: Đen/JustaTee - Đi Về Nhà
+♫ Logged: Đen/JustaTee - Đi Về Nhà (200s)
+▶ Now playing: Da LAB/Tóc Tiên - Nước Mắt Em Lau Bằng Tình Yêu Mới
+♫ Logged: Da LAB/Tóc Tiên - Nước Mắt Em Lau Bằng Tình Yêu Mới (286s)
+▶ Now playing: Hoàng Dũng - Ném Câu Yêu Vào Không Trung
+♫ Logged: Hoàng Dũng - Ném Câu Yêu Vào Không Trung (236s)
+▶ Now playing: Lope Dope - Vô Vị
+♫ Logged: Lope Dope - Vô Vị (214s)
+▶ Now playing: MIN - Cà Phê
+♫ Logged: MIN - Cà Phê (58s)
+▶ Now playing: Mer, Kriss Ngo - em
+▶ Now playing: MIN - Cà Phê
+▶ Now playing: Mer, Kriss Ngo - em
+♫ Logged: Mer, Kriss Ngo - em (30s)
+▶ Now playing: Phương Ly - Little Love (But No Limit)
+♫ Logged: Phương Ly - Little Love (But No Limit) (60s)
+▶ Now playing: Thịnh Suy - Chết Trong Em
+▶ Now playing: Mer, Kriss Ngo - tâm
+▶ Now playing: Mer, Kriss Ngo - last day on earth
+▶ Now playing: Pink Sweat$ - At My Worst
+▶ Now playing: Mer, Kriss Ngo - another chance?
+▶ Now playing: Hào - Cỏ may
+▶ Now playing: Wean, Tlinh - shhhhhhh..
+▶ Now playing: Chuột Sấm Sét - đôi mình
+▶ Now playing: Phương Ly - ThichThich
+▶ Now playing: Phương Ly - ThichThich
+▶ Now playing: Phương Ly - Missing You
+▶ Now playing: buitruonglinh - Yêu Người Có Ước Mơ
+▶ Now playing: Vũ. - Bước Qua Nhau
+♫ Logged: Vũ. - Bước Qua Nhau (30s)
+▶ Now playing: Hào - Có khóc cũng thế thôi
+▶ Now playing: Chuột Sấm Sét - đôi mình
+▶ Now playing: Baki, Zyzz - Titanium (Hardstyle)
+▶ Now playing: Baki, Zyzz, GYM HARDSTYLE - Safe and Sound (Hardstyle)
+▶ Now playing: crypvolk - On The Floor (Hardstyle)
+▶ Now playing: YOASOBI - 群青
+▶ Now playing: Soobin - giá như
+▶ Now playing: たかやん - Bad example
+♫ Logged: たかやん - Bad example (60s)
+▶ Now playing: Amelia Khor - Grand Escape (feat. Koyomin)
+▶ Now playing: Bösendorfer Grand Piano - Circus Galop for two Player Pianos
+▶ Now playing: Camellia - Flamewall
+▶ Now playing: Vũ. - Đông Kiếm Em
+▶ Now playing: Soobin, Rhymastic - Sẽ Quên Em Nhanh Thôi (feat. Rhymastic)
+Traceback (most recent call last):
+  File "/home/kintarou/.config/rmpc/rmpc-logger.py", line 111, in <module>
+    logger.run()
+    ~~~~~~~~~~^^
+  File "/home/kintarou/.config/rmpc/rmpc-logger.py", line 78, in run
+    prev_song = self.client.playlistid(self.current_song)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 497, in mpd_command
+    return wrapper(self, name, args, callback)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 559, in _execute
+    return retval()
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 484, in command_callback
+    res = self._wrap_iterator(res)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 752, in _wrap_iterator
+    return list(iterator)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 225, in _parse_objects
+    for key, value in self._parse_pairs(lines):
+                      ~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 215, in _parse_pairs
+    for line in lines:
+                ^^^^^
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 615, in _read_lines
+    line = self._read_line()
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 604, in _read_line
+    raise CommandError(error)
+mpd.base.CommandError: [50@0] {playlistid} No such song
+✓ Connected to MPD at localhost:6600
+📊 Logging to: /home/kintarou/.config/rmpc/listening_history.jsonl
+🎵 Monitoring your listening activity...
+
+▶ Now playing: Ariana Grande, Lil Wayne - Let Me Love You
+♫ Logged: Ariana Grande, Lil Wayne - Let Me Love You (100s)
+▶ Now playing: Jamie Miller - Here's Your Perfect
+▶ Now playing: Survive Said The Prophet - Mukanjyo
+▶ Now playing: Parry Gripp - Happy Muffin
+▶ Now playing: YOASOBI - ハルジオン
+▶ Now playing: VIC MENSA, Malik Yusef, Wyatt Waddell - NO MORE TEARDROPS
+▶ Now playing: the peggies - Dive to Love
+▶ Now playing: RetroWarriorKult - Shinzou Wo Sasageyo (Linked Horizon)
+▶ Now playing: Creepy Nuts - Daten
+▶ Now playing: S3RL - Bass Slut (Raw File)
+▶ Now playing: 鹿乃 - 六兆年と一夜物語
+▶ Now playing: Truant Fu - RUNAWAY
+♫ Logged: Truant Fu - RUNAWAY (244s)
+▶ Now playing: Truant Fu - CRAZE
+♫ Logged: Truant Fu - CRAZE (132s)
+▶ Now playing: Truant Fu - Một Thời
+▶ Now playing: Truant Fu - Rối Ren
+▶ Now playing: Truant Fu - RUNAWAY
+▶ Now playing: Truant Fu - Fool
+Traceback (most recent call last):
+  File "/home/kintarou/.config/rmpc/rmpc-logger.py", line 111, in <module>
+    logger.run()
+    ~~~~~~~~~~^^
+  File "/home/kintarou/.config/rmpc/rmpc-logger.py", line 78, in run
+    prev_song = self.client.playlistid(self.current_song)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 497, in mpd_command
+    return wrapper(self, name, args, callback)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 559, in _execute
+    return retval()
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 484, in command_callback
+    res = self._wrap_iterator(res)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 752, in _wrap_iterator
+    return list(iterator)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 225, in _parse_objects
+    for key, value in self._parse_pairs(lines):
+                      ~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 215, in _parse_pairs
+    for line in lines:
+                ^^^^^
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 615, in _read_lines
+    line = self._read_line()
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 604, in _read_line
+    raise CommandError(error)
+mpd.base.CommandError: [50@0] {playlistid} No such song
+✓ Connected to MPD at localhost:6600
+📊 Logging to: /home/kintarou/.config/rmpc/listening_history.jsonl
+🎵 Monitoring your listening activity...
+
+▶ Now playing: No Sleep Session - My Forever
+♫ Logged: No Sleep Session - My Forever (196s)
+▶ Now playing: No Sleep Session - Đời Xanh
+♫ Logged: No Sleep Session - Đời Xanh (144s)
+▶ Now playing: No Sleep Session - Đôi Ta Trong Mơ
+♫ Logged: No Sleep Session - Đôi Ta Trong Mơ (186s)
+▶ Now playing: No Sleep Session - My Forever
+Traceback (most recent call last):
+  File "/home/kintarou/.config/rmpc/rmpc-logger.py", line 111, in <module>
+    logger.run()
+    ~~~~~~~~~~^^
+  File "/home/kintarou/.config/rmpc/rmpc-logger.py", line 78, in run
+    prev_song = self.client.playlistid(self.current_song)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 497, in mpd_command
+    return wrapper(self, name, args, callback)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 559, in _execute
+    return retval()
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 484, in command_callback
+    res = self._wrap_iterator(res)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 752, in _wrap_iterator
+    return list(iterator)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 225, in _parse_objects
+    for key, value in self._parse_pairs(lines):
+                      ~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 215, in _parse_pairs
+    for line in lines:
+                ^^^^^
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 615, in _read_lines
+    line = self._read_line()
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 604, in _read_line
+    raise CommandError(error)
+mpd.base.CommandError: [50@0] {playlistid} No such song
+✓ Connected to MPD at localhost:6600
+📊 Logging to: /home/kintarou/.config/rmpc/listening_history.jsonl
+🎵 Monitoring your listening activity...
+
+▶ Now playing: No Sleep Session - Đời Xanh
+▶ Now playing: Jun Phạm, Bùi Công Nam, Rhymastic, Duy Khánh 周周, Ngọc Thanh Tâm - Những Ngày Trời Bao La
+Traceback (most recent call last):
+  File "/home/kintarou/.config/rmpc/rmpc-logger.py", line 111, in <module>
+    logger.run()
+    ~~~~~~~~~~^^
+  File "/home/kintarou/.config/rmpc/rmpc-logger.py", line 78, in run
+    prev_song = self.client.playlistid(self.current_song)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 497, in mpd_command
+    return wrapper(self, name, args, callback)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 559, in _execute
+    return retval()
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 484, in command_callback
+    res = self._wrap_iterator(res)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 752, in _wrap_iterator
+    return list(iterator)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 225, in _parse_objects
+    for key, value in self._parse_pairs(lines):
+                      ~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 215, in _parse_pairs
+    for line in lines:
+                ^^^^^
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 615, in _read_lines
+    line = self._read_line()
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 604, in _read_line
+    raise CommandError(error)
+mpd.base.CommandError: [50@0] {playlistid} No such song
+✓ Connected to MPD at localhost:6600
+📊 Logging to: /home/kintarou/.config/rmpc/listening_history.jsonl
+🎵 Monitoring your listening activity...
+
+▶ Now playing: Ed Sheeran - Perfect
+♫ Logged: Ed Sheeran - Perfect (262s)
+▶ Now playing: Ed Sheeran - Bad Habits
+♫ Logged: Ed Sheeran - Bad Habits (231s)
+▶ Now playing: Mariah Carey - All I Want for Christmas Is You
+♫ Logged: Mariah Carey - All I Want for Christmas Is You (242s)
+▶ Now playing: James Arthur, Anne-Marie - Rewrite The Stars
+♫ Logged: James Arthur, Anne-Marie - Rewrite The Stars (218s)
+▶ Now playing: Ed Sheeran - Photograph
+♫ Logged: Ed Sheeran - Photograph (260s)
+▶ Now playing: Taylor Swift - Daylight
+♫ Logged: Taylor Swift - Daylight (36s)
+▶ Now playing: Libianca, Ayra Starr, Omah lay - People (feat. Ayra Starr & Omah Lay)
+♫ Logged: Libianca, Ayra Starr, Omah lay - People (feat. Ayra Starr & Omah Lay) (34s)
+▶ Now playing: Taylor Swift - You Belong With Me (Taylor’s Version)
+♫ Logged: Taylor Swift - You Belong With Me (Taylor’s Version) (44s)
+▶ Now playing: Sia - Snowman
+♫ Logged: Sia - Snowman (166s)
+▶ Now playing: NIKI - Take A Chance With Me
+♫ Logged: NIKI - Take A Chance With Me (304s)
+▶ Now playing: hooligan. - To The Moon
+♫ Logged: hooligan. - To The Moon (32s)
+▶ Now playing: One Direction - What Makes You Beautiful
+♫ Logged: One Direction - What Makes You Beautiful (198s)
+▶ Now playing: Ariana Grande - Daydreamin'
+♫ Logged: Ariana Grande - Daydreamin' (212s)
+▶ Now playing: Jawsh 685, Jason Derulo - Savage Love (Laxed - Siren Beat)
+♫ Logged: Jawsh 685, Jason Derulo - Savage Love (Laxed - Siren Beat) (172s)
+▶ Now playing: Demi Lovato - Cool for the Summer
+♫ Logged: Demi Lovato - Cool for the Summer (110s)
+▶ Now playing: Doja Cat - Woman
+♫ Logged: Doja Cat - Woman (140s)
+▶ Now playing: Ed Sheeran - Shape of You
+▶ Now playing: Henry Moodie - drunk text
+▶ Now playing: The Weeknd - Reminder
+♫ Logged: The Weeknd - Reminder (218s)
+▶ Now playing: Camila Cabello, Young Thug - Havana (feat. Young Thug)
+♫ Logged: Camila Cabello, Young Thug - Havana (feat. Young Thug) (88s)
+▶ Now playing: Dept, Ashley Alisha, nobody likes you pat - Winter blossom (feat. Ashley Alisha & nobody likes you pat)
+♫ Logged: Dept, Ashley Alisha, nobody likes you pat - Winter blossom (feat. Ashley Alisha & nobody likes you pat) (168s)
+▶ Now playing: Stacey Ryan - Fall In Love Alone
+♫ Logged: Stacey Ryan - Fall In Love Alone (206s)
+▶ Now playing: bôa - Duvet
+♫ Logged: bôa - Duvet (204s)
+▶ Now playing: Jamie Miller - Here's Your Perfect
+♫ Logged: Jamie Miller - Here's Your Perfect (158s)
+▶ Now playing: The Weeknd, Lily Rose Depp, JENNIE - One Of The Girls
+▶ Now playing: Đen, Justatee - Đi Về Nhà
+♫ Logged: Đen, Justatee - Đi Về Nhà (200s)
+▶ Now playing: the Cassette - Intermission: Rượu Vang
+▶ Now playing: Sliverk - Ai No Supreme (Miss Kobayashi's Dragon Maid S)
+▶ Now playing: Ai Higuchi - Akuma no Ko - From the First Take -
+Traceback (most recent call last):
+  File "/home/kintarou/.config/rmpc/rmpc-logger.py", line 111, in <module>
+    logger.run()
+    ~~~~~~~~~~^^
+  File "/home/kintarou/.config/rmpc/rmpc-logger.py", line 78, in run
+    prev_song = self.client.playlistid(self.current_song)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 497, in mpd_command
+    return wrapper(self, name, args, callback)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 559, in _execute
+    return retval()
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 484, in command_callback
+    res = self._wrap_iterator(res)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 752, in _wrap_iterator
+    return list(iterator)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 225, in _parse_objects
+    for key, value in self._parse_pairs(lines):
+                      ~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 215, in _parse_pairs
+    for line in lines:
+                ^^^^^
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 615, in _read_lines
+    line = self._read_line()
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 604, in _read_line
+    raise CommandError(error)
+mpd.base.CommandError: [50@0] {playlistid} No such song
+✓ Connected to MPD at localhost:6600
+📊 Logging to: /home/kintarou/.config/rmpc/listening_history.jsonl
+🎵 Monitoring your listening activity...
+
+▶ Now playing: Project Epsilon - Alice in N.Y.
+Traceback (most recent call last):
+  File "/home/kintarou/.config/rmpc/rmpc-logger.py", line 111, in <module>
+    logger.run()
+    ~~~~~~~~~~^^
+  File "/home/kintarou/.config/rmpc/rmpc-logger.py", line 78, in run
+    prev_song = self.client.playlistid(self.current_song)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 497, in mpd_command
+    return wrapper(self, name, args, callback)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 559, in _execute
+    return retval()
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 484, in command_callback
+    res = self._wrap_iterator(res)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 752, in _wrap_iterator
+    return list(iterator)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 225, in _parse_objects
+    for key, value in self._parse_pairs(lines):
+                      ~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 215, in _parse_pairs
+    for line in lines:
+                ^^^^^
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 615, in _read_lines
+    line = self._read_line()
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 604, in _read_line
+    raise CommandError(error)
+mpd.base.CommandError: [50@0] {playlistid} No such song
+✓ Connected to MPD at localhost:6600
+📊 Logging to: /home/kintarou/.config/rmpc/listening_history.jsonl
+🎵 Monitoring your listening activity...
+
+▶ Now playing: THE KOXX - A Fool Moon Night
+Traceback (most recent call last):
+  File "/home/kintarou/.config/rmpc/rmpc-logger.py", line 111, in <module>
+    logger.run()
+    ~~~~~~~~~~^^
+  File "/home/kintarou/.config/rmpc/rmpc-logger.py", line 78, in run
+    prev_song = self.client.playlistid(self.current_song)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 497, in mpd_command
+    return wrapper(self, name, args, callback)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 559, in _execute
+    return retval()
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 484, in command_callback
+    res = self._wrap_iterator(res)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 752, in _wrap_iterator
+    return list(iterator)
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 225, in _parse_objects
+    for key, value in self._parse_pairs(lines):
+                      ~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 215, in _parse_pairs
+    for line in lines:
+                ^^^^^
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 615, in _read_lines
+    line = self._read_line()
+  File "/usr/lib/python3.13/site-packages/mpd/base.py", line 604, in _read_line
+    raise CommandError(error)
+mpd.base.CommandError: [50@0] {playlistid} No such song

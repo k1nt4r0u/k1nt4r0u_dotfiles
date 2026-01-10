@@ -14,11 +14,15 @@ setopt SHARE_HISTORY
 setopt HIST_IGNORE_DUPS
 setopt INTERACTIVE_COMMENTS
 
-PROMPT='%n@%m [%~] 
-%(!.#.$) '
+# PROMPT='%n@%m [%~] 
+# %(!.#.$) '
+
+PROMPT='%F{#83bff3}%n%f%F{250}@%f%F{#83bff3}%m%f %F{#83bff3}[%~]%f 
+%F{#83bff3}%(!.#.$)%f '
 
 export PATH="$PATH:/home/kintarou/.local/bin"
 export LS_COLORS="$(vivid generate catppuccin-macchiato | sed 's/=\(0\)\?4;/=00;/g')"
+export LF_FZF_OPTS="--ansi"
 if [ -f "$HOME/.config/lf/icons" ]; then
     export LF_ICONS=$(sed -e 's/  */=/g' -e 's/$/:/g' "$HOME/.config/lf/icons" | tr -d '\n')
 fi
@@ -32,6 +36,32 @@ alias mt='unimatrix -n -c blue -s 96'
 alias cl='tty-clock -c -C 4 -b -D'
 alias wstart='sudo systemctl start waydroid-container && waydroid show-full-ui'
 alias wstop='waydroid session stop && sudo systemctl stop waydroid-container'
+alias passkee='wl-copy < /home/kintarou/Documents/AnyDesk/passkey'
+getytmusic() {
+    if [ -z "$1" ]; then
+        echo "Usage: getytmusic <YouTube Music URL>"
+        return 1
+    fi
+    yt-dlp -f "ba[ext=m4a]" \
+    --embed-metadata \
+    --embed-thumbnail \
+    --parse-metadata "title:%(title)s" \
+    --parse-metadata "artist:%(artist)s" \
+    --remote-components ejs:github \
+    -o "%(title)s.%(ext)s" \
+    "$1" \
+	&& mpc update
+}
+
+getspotifymusic() {
+	if [ -z "$1" ]; then
+		echo "Usage: getspotifymusic <Spotify URL>"
+		return 1
+	fi
+	spotdl "$1" \
+	&& mpc update
+}
+
 pwninit() {
     if [ -z "$1" ]; then
         command pwninit
@@ -40,18 +70,46 @@ pwninit() {
     fi
 }
 
+# lf() {
+#     alacritty msg config window.padding.x=5 window.padding.y=5 &!
+#     local tmp="$(mktemp)"
+#     command lf -last-dir-path="$tmp" "$@"
+#     alacritty msg config window.padding.x=25 window.padding.y=25 &! 
+#     if [ -f "$tmp" ]; then
+#         local dir="$(cat "$tmp")"
+#         rm -f "$tmp"
+#         if [ -d "$dir" ]; then
+#             if [ "$dir" != "$(pwd)" ]; then
+#                 cd "$dir"
+#             fi
+#         fi
+#     fi
+# }
+
+# lf() {
+#     kitty @ set-spacing padding=3 &!
+#     local tmp="$(mktemp)"
+#     command lf -last-dir-path="$tmp" "$@"
+#     kitty @ set-spacing padding=20 &!
+#     if [ -f "$tmp" ]; then
+#         local dir="$(cat "$tmp")"
+#         rm -f "$tmp"
+#         if [ -d "$dir" ] && [ "$dir" != "$(pwd)" ]; then
+#             cd "$dir"
+# 			clear
+#         fi
+#     fi
+# }
+
 lf() {
-    alacritty msg config window.padding.x=5 window.padding.y=5 &!
     local tmp="$(mktemp)"
     command lf -last-dir-path="$tmp" "$@"
-    alacritty msg config window.padding.x=25 window.padding.y=25 &! 
     if [ -f "$tmp" ]; then
         local dir="$(cat "$tmp")"
         rm -f "$tmp"
-        if [ -d "$dir" ]; then
-            if [ "$dir" != "$(pwd)" ]; then
-                cd "$dir"
-            fi
+        if [ -d "$dir" ] && [ "$dir" != "$(pwd)" ]; then
+            cd "$dir"
+			clear
         fi
     fi
 }
@@ -172,7 +230,6 @@ wu() {
 }
 
 source <(fzf --zsh)
-
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ZSH_HIGHLIGHT_STYLES[path]='fg=white'
@@ -189,3 +246,12 @@ export __GLX_VENDOR_LIBRARY_NAME=nvidia
 export LIBVA_DRIVER_NAME=nvidia
 export NVD_BACKEND=direct
 export MOZ_DISABLE_RDD_SANDBOX=1
+export BROWSER=librewolf
+/home/kintarou/.config/rmpc/wrapped-reminder.sh
+
+# bun completions
+[ -s "/home/kintarou/.bun/_bun" ] && source "/home/kintarou/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
