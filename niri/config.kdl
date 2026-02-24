@@ -1,4 +1,3 @@
-spawn-at-startup "waybar"
 spawn-at-startup "xdg-desktop-portal-wlr"
 spawn-at-startup "foot --server"
 spawn-at-startup "xdg-desktop-portal"
@@ -14,8 +13,8 @@ spawn-at-startup "xwayland-satellite"
 spawn-at-startup "env" "WLR_DRM_DEVICES=/dev/dri/card2" "swaync"
 spawn-at-startup "wl-paste" "--watch" "cliphist" "store"
 spawn-at-startup "/home/kintarou/.config/hypr/Scripts/watch_iphone"
+spawn-at-startup "quickshell"
 cursor {
-	// xcursor-theme "Hoshimachi-Suisei"
 	xcursor-theme "Ayaka-Kamisato-Springbloom"
 	hide-when-typing
 	xcursor-size 37
@@ -26,7 +25,7 @@ environment {
 }
 
 window-rule {
-	geometry-corner-radius 0
+	geometry-corner-radius 6
 	clip-to-geometry true
 }
 
@@ -34,15 +33,6 @@ window-rule {
 	match app-id="Evince"
 	default-column-width { fixed 1300; }
 	default-window-height { fixed 1080; }
-}
-
-window-rule {
-    match app-id="^ueberzugpp_"
-    open-floating true
-    border { off; }
-    focus-ring { off; }
-    shadow { off; }
-    open-focused false
 }
 
 window-rule {
@@ -56,6 +46,7 @@ window-rule {
 	match app-id="librewolf"
 	match app-id="ONLYOFFICE"
 	match app-id="feishin"
+	match app-id="jetbrains-pycharm-ce"
 	// default-column-width { fixed 1911; }
 	// default-window-height { fixed 1083; }
 	default-column-width { proportion 1.0; }
@@ -82,8 +73,7 @@ window-rule {
 	match app-id="Alacritty"
 	match app-id="kitty"
 	match app-id="foot"
-	default-column-width { fixed 1910; }
-	default-window-height { fixed 1082; }
+	default-column-width { proportion 1.0; }
 	draw-border-with-background false
 }
 
@@ -181,7 +171,7 @@ output "eDP-1" {
 // https://yalter.github.io/niri/Configuration:-Layout
 layout {
 	// Set gaps around windows in logical pixels.
-	gaps 3
+	gaps 5
 
 	// When to center a column when changing focus, options are:
 	// - "never", default behavior, focusing an off-screen column will keep at the left
@@ -468,10 +458,10 @@ binds {
 	// but you need to manually put each argument in separate "" quotes.
 	XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+5%"; }
 	XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "5%-"; }
-	XF86AudioNext allow-when-locked=true {spawn "playerctl" "next";}
-	XF86AudioPause allow-when-locked=true {spawn "playerctl" "play-pause";}
-	XF86AudioPlay allow-when-locked=true {spawn "playerctl" "play-pause";}
-	XF86AudioPrev allow-when-locked=true {spawn "playerctl" "previous";}
+	XF86AudioNext allow-when-locked=true {spawn "~/.config/waybar/scripts/player-next.sh"; }
+	XF86AudioPause allow-when-locked=true {spawn "~/.config/waybar/scripts/player.sh"; }
+	XF86AudioPlay allow-when-locked=true {spawn "~/.config/waybar/scripts/player.sh"; }
+	XF86AudioPrev allow-when-locked=true {spawn "~/.config/waybar/scripts/player-prev.sh";}
 	// Open/close the Overview: a zoomed-out view of workspaces and windows.
 	// You can also move the mouse into the top-left hot corner,
 	// or do a four-finger swipe up on a touchpad.

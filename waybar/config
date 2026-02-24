@@ -1,12 +1,12 @@
 {
 	"include": "~/.config/waybar/modules.json",
 	"position": "top",
-	"margin-top": 5,
+	"margin-top": 6,
 	"margin-bottom": 0,
 	"layer": "top",
-	"margin-left": 5,
-	"margin-right": 5,    
-	"spacing": 3,
+	"margin-left": 8,
+	"margin-right": 8,    
+	"height": 42,
 	"fixed-center": true,
 	"exclusive": true,
 	"modules-left": [
@@ -24,7 +24,8 @@
            "pulseaudio",
            "bluetooth",
            "network",
-           "battery", 
+           "battery",
+           "custom/quicksettings",
            "custom/exit"
         ]
 }
